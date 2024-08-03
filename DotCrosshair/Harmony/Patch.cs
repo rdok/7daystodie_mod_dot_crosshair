@@ -11,7 +11,7 @@ namespace DotCrosshair.Harmony
 
         public static bool Prefix(EntityPlayerLocal __instance, NGuiWdwInGameHUD _guiInGame, bool bModalWindowOpen)
         {
-            Logger.Info("CrosshairPatch: Prefix called on EntityPlayerLocal.guiDrawCrosshair.");
+            Logger.Info("Patch: Prefix called on EntityPlayerLocal.guiDrawCrosshair.");
 
             var holdingItem = __instance.inventory.holdingItemItemValue;
             var holdingRangedWeapon = holdingItem?.ItemClass?.Actions?
@@ -22,7 +22,7 @@ namespace DotCrosshair.Harmony
 
             if (holdingRangedWeapon)
             {
-                Logger.Info("CrosshairPatch: Player is holding a ranged weapon, using default crosshair.");
+                Logger.Info("Patch: Player is holding a ranged weapon, using default crosshair.");
                 return callGuidDrawCrosshairFunction;
             }
 
@@ -30,18 +30,18 @@ namespace DotCrosshair.Harmony
                 __instance.IsDead() ||
                 __instance.emodel.IsRagdollActive || __instance.AttachedToEntity != null)
             {
-                Logger.Info("CrosshairPatch: Conditions not met for crosshair rendering, skipping.");
+                Logger.Info("Patch: Conditions not met for crosshair rendering, skipping.");
                 return disableGuiDrawCrosshairFunction;
             }
 
             if (bModalWindowOpen || __instance.inventory == null)
             {
                 Logger.Info(
-                    "CrosshairPatch: Modal window open or inventory is null, skipping crosshair rendering.");
+                    "Patch: Modal window open or inventory is null, skipping crosshair rendering.");
                 return disableGuiDrawCrosshairFunction;
             }
 
-            Logger.Info("CrosshairPatch: Player is not holding a ranged weapon, drawing dot crosshair.");
+            Logger.Info("Patch: Player is not holding a ranged weapon, drawing dot crosshair.");
             DotCrosshair.Draw(__instance);
 
             return disableGuiDrawCrosshairFunction;

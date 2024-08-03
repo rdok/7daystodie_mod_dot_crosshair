@@ -53,14 +53,17 @@ namespace DotCrosshair.Harmony
             _logger.Info($"DrawDotCrosshair: Screen center calculated as {center}.");
 
             // Define the size of the dot
-            float dotSize = 5f;
+            float dotSize = 6f;
 
             // Create a rectangle for the dot
             Rect dotRect = new Rect(center.x - dotSize / 2, center.y - dotSize / 2, dotSize, dotSize);
             _logger.Info($"DrawDotCrosshair: Dot rectangle created at {dotRect}.");
 
-            // Draw the dot using a simple color
-            GUI.color = Color.red;
+            // Get the current GUI color to use the default color
+            Color originalColor = GUI.color;
+            _logger.Info($"DrawDotCrosshair: Using default GUI color {originalColor}.");
+
+            // Draw the dot using the current GUI color
             GUI.DrawTexture(dotRect, Texture2D.whiteTexture);
             _logger.Info("DrawDotCrosshair: Dot crosshair drawn.");
         }

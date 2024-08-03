@@ -1,93 +1,37 @@
-﻿using System;
-using System.Linq;
-using HarmonyLib;
 using UnityEngine;
 
 namespace DotCrosshair.Harmony
 {
-    public class DotCrosshair
+    public static class DotCrosshair
     {
-        private static ILogger _logger = new Logger();
+        private static readonly ILogger Logger = new Logger();
 
-        public static void SetLogger(ILogger logger)
+        public static void Draw(EntityPlayerLocal player)
         {
-            _logger = logger;
-        }
+            Logger.Info("DrawDotCrosshair: Drawing a dot crosshair with shadow.");
 
-        public static void ApplyPatch()
-        {
-            _logger.Info("ApplyPatch: Starting patch application.");
-            try
-            {
-                var harmony = new HarmonyLib.Harmony("com.dotcrosshair.patch");
-                harmony.PatchAll();
-                _logger.Info("ApplyPatch: Harmony patches applied successfully.");
-            }
-            catch (Exception ex)
-            {
-                _logger.Error($"ApplyPatch: Error applying Harmony patches: {ex}");
-            }
-        }
+            var center = new Vector2(Screen.width / 2, Screen.height / 2);
+            Logger.Info($"DrawDotCrosshair: Screen center calculated as {center}.");
 
-        // Patch the guiDrawCrosshair method of EntityPlayerLocal
-        [HarmonyPatch(typeof(EntityPlayerLocal), "guiDrawCrosshair")]
-        public static class CrosshairPatch
-        {
-            public static bool Prefix(EntityPlayerLocal __instance, NGuiWdwInGameHUD _guiInGame, bool bModalWindowOpen)
-            {
-                _logger.Info("CrosshairPatch: Prefix called on EntityPlayerLocal.guiDrawCrosshair.");
+            const float dotSize = 6f;
 
-                // Check if the player is holding a ranged weapon
-                var holdingItem = __instance.inventory.holdingItemItemValue;
-                var holdingRangedWeapon = holdingItem?.ItemClass?.Actions?
-                    .Any(action => action is ItemActionRanged) ?? false;
+            var shadowOffset = new Vector2(1f, 1f);
 
-                if (holdingRangedWeapon)
-                {
-                    _logger.Info("CrosshairPatch: Player is holding a ranged weapon, using default crosshair.");
-                    return true; // Allow default crosshair rendering
-                }
+            var dotRect = new Rect(center.x - dotSize / 2, center.y - dotSize / 2, dotSize, dotSize);
+            var shadowRect = new Rect(dotRect.x + shadowOffset.x, dotRect.y + shadowOffset.y, dotSize, dotSize);
 
-                _logger.Info("CrosshairPatch: Player is not holding a ranged weapon, drawing dot crosshair.");
-                DrawDotCrosshair();
+            var fullyOpaqueBlack = new Color(0f, 0f, 0f, 1f);
+            GUI.color = fullyOpaqueBlack;
+            GUI.DrawTexture(shadowRect, Texture2D.whiteTexture);
 
-                // Return false to skip original guiDrawCrosshair execution for crosshair rendering
-                return false;
-            }
-        }
-
-        private static void DrawDotCrosshair()
-        {
-            _logger.Info("DrawDotCrosshair: Drawing a dot crosshair.");
-
-            // Get the center of the screen
-            Vector2 center = new Vector2(Screen.width / 2, Screen.height / 2);
-            _logger.Info($"DrawDotCrosshair: Screen center calculated as {center}.");
-
-            // Define the size of the dot
-            float dotSize = 6f;
-
-            // Create a rectangle for the dot
-            Rect dotRect = new Rect(center.x - dotSize / 2, center.y - dotSize / 2, dotSize, dotSize);
-            _logger.Info($"DrawDotCrosshair: Dot rectangle created at {dotRect}.");
-
-            // Get the current GUI color to use the default color
-            Color originalColor = GUI.color;
-            _logger.Info($"DrawDotCrosshair: Using default GUI color {originalColor}.");
-
-            // Draw the dot using the current GUI color
+            var crosshairAlpha = player.weaponCrossHairAlpha;
+            var crosshairColor = new Color(1f, 1f, 1f, crosshairAlpha);
+            GUI.color = crosshairColor;
             GUI.DrawTexture(dotRect, Texture2D.whiteTexture);
-            _logger.Info("DrawDotCrosshair: Dot crosshair drawn.");
-        }
 
-        public class Init : IModApi
-        {
-            public void InitMod(Mod modInstance)
-            {
-                _logger.Info("InitMod: Loading Dot Crosshair Mod");
-                ApplyPatch();
-                _logger.Info("InitMod: Dot Crosshair Mod loaded successfully.");
-            }
+            GUI.color = Color.white;
+
+            Logger.Info("DrawDotCrosshair: Dot crosshair with shadow drawn.");
         }
     }
 }

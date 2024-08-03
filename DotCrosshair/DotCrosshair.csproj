@@ -28,13 +28,30 @@
         <PlatformTarget>AnyCPU</PlatformTarget>
         <DebugType>none</DebugType>
         <Optimize>true</Optimize>
-        <OutputPath>bin\Release\</OutputPath>
-        <DefineConstants>TRACE</DefineConstants>
         <ErrorReport>prompt</ErrorReport>
         <WarningLevel>3</WarningLevel>
+        <DefineConstants>TRACE;RELEASE</DefineConstants>
+        <OutputPath>bin\Release\</OutputPath>
+        <AbsoluteOutputPath>$(MSBuildProjectDirectory)\$(OutputPath)</AbsoluteOutputPath>
+        <ModName>DotCrosshair</ModName>
+        <ModVersion>1.0.1</ModVersion>
+        <ModDescription>Replaces the default crosshair with a dot, except when using ranged weapons.</ModDescription>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'ReleaseGlobalDot|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugType>none</DebugType>
+        <Optimize>true</Optimize>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>3</WarningLevel>
+        <DefineConstants>TRACE;GLOBAL_DOT</DefineConstants>
+        <OutputPath>bin\ReleaseGlobalDot\</OutputPath>
+        <AbsoluteOutputPath>$(MSBuildProjectDirectory)\$(OutputPath)</AbsoluteOutputPath>
+        <ModName>DotCrosshairGlobal</ModName>
+        <ModVersion>1.0.0</ModVersion>
+        <ModDescription>Replaces the default crosshair with a dot, globally.</ModDescription>
     </PropertyGroup>
     <ItemGroup>
-        <Compile Include="Harmony\DotCrosshair.cs" />
+        <Compile Include="Harmony\DotCrosshair.cs"/>
         <Compile Include="Harmony\Init.cs"/>
         <Compile Include="Harmony\Logger.cs"/>
         <Compile Include="Harmony\Patch.cs"/>
@@ -76,10 +93,14 @@
 
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
 
-    <Target Name="AfterBuild" Condition=" '$(Configuration)' == 'Release' ">
-        <Exec Command="npm run build" WorkingDirectory="$(MSBuildProjectDirectory)\.."/>
+    <Target Name="AfterBuild" Condition=" '$(Configuration)' == 'ReleaseGlobalDot' OR '$(Configuration)' == 'Release' ">
+        <Exec
+                Command="npm run build --prefix -- $(AbsoluteOutputPath) $(ModName) $(ModName) &quot;$(ModDescription)&quot; $(ModVersion)"
+                WorkingDirectory="$(MSBuildProjectDirectory)\.."
+        />
         <Exec Command="npm run generate_readme" WorkingDirectory="$(MSBuildProjectDirectory)\.."/>
     </Target>
+
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
          Other similar extension points exist, see Microsoft.Common.targets.
     <Target Name="BeforeBuild">

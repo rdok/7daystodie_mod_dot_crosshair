@@ -34,8 +34,10 @@
         <WarningLevel>3</WarningLevel>
     </PropertyGroup>
     <ItemGroup>
-        <Compile Include="Harmony\DotCrosshair.cs"/>
+        <Compile Include="Harmony\DotCrosshair.cs" />
+        <Compile Include="Harmony\Init.cs"/>
         <Compile Include="Harmony\Logger.cs"/>
+        <Compile Include="Harmony\Patch.cs"/>
         <Compile Include="Properties\AssemblyInfo.cs"/>
     </ItemGroup>
 

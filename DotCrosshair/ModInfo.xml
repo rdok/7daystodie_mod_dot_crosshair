@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xml>
+    <Name value="DotCrosshair"/>
+    <DisplayName value="Dot Crosshair"/>
+    <Author value="Rizarttt"/>
+    <Description value="Replace default crosshair with a dot; expect when holding no ranged weapon."/>
+    <Website value="https://www.nexusmods.com/7daystodie/mods/5640"/>
+    <Version value="1.0.1"/>
+</xml>

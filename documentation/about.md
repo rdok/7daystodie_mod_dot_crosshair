@@ -19,8 +19,3 @@
     - [ImmersiveCrosshhair](https://www.nexusmods.com/7daystodie/mods/5601)
     - [Danzo No Crosshair 1.2.1](https://www.nexusmods.com/Core/Libs/Common/Widgets/DownloadPopUp?id=17443&nmm=1&game_id=1059)
 - Check out the GIF showcase in the NexusMods Images section.
-
-### Sources
-
-- [Harmony Patching](https://harmony.pardeike.net/articles/patching-postfix.html)
-- [devlooped/moq](https://github.com/devlooped/moq)

@@ -3,7 +3,7 @@
     <Name value="DotCrosshair"/>
     <DisplayName value="Dot Crosshair"/>
     <Author value="Rizarttt"/>
-    <Description value="Replace default crosshair with a dot; expect when holding no ranged weapon."/>
+    <Description value="Replaces the default crosshair with a dot, except when using ranged weapons."/>
     <Website value="https://www.nexusmods.com/7daystodie/mods/5640"/>
     <Version value="1.0.0"/>
 </xml>

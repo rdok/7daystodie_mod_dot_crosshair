@@ -1,0 +1,25 @@
+[size=6]7 Days to Die Mod - Dot Crosshair[/size]
+
+[url=https://www.nexusmods.com/7daystodie/mods/5640][img]https://img.shields.io/badge/Nexus%20Mod-Dot%20Crosshair%20-orange?style=flat-square&logo=spinrilla[/img][/url]
+[url=https://github.com/rdok/7daystodie_mod_dot_crosshair][img]https://img.shields.io/badge/GitHub-Repository-green?style=flat-square&logo=github[/img][/url]
+
+[quote]
+[b]Dot Crosshair:[/b] Replace default crosshair with a dot, excluding holding ranged weapons.   
+[b]EAC Caveat:[/b] This mod uses custom code that is not compatible with Easy Anti-Cheat (EAC).
+[/quote]
+[url=https://www.nexusmods.com/7daystodie/mods/5640][img]https://github.com/rdok/7daystodie_mod_dot_crosshair/blob/main/documentation/showcase.gif?raw=true[/img][/url]
+
+[list]
+[*] 7daystodie Version: 1.0 (b333)
+[*] Install with [url=https://www.nexusmods.com/about/vortex/]Vortex[/url].
+[/list]
+[size=5]Features[/size]
+[list]
+[*] Replace default (X) crosshair with a dot.   
+[*] Preserves the default behavior for ranged weapons.
+[/list]
+[size=4]Sources[/size]
+[list]
+[*] [url=https://harmony.pardeike.net/articles/patching-postfix.html]Harmony Patching[/url]
+[*] [url=https://github.com/devlooped/moq]devlooped/moq[/url]
+[/list]

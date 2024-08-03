@@ -13,7 +13,7 @@ namespace DotCrosshair.Harmony
             _logger = logger;
         }
 
-        private static void ApplyPatch()
+        public static void ApplyPatch()
         {
             _logger.Info("ApplyPatch: Starting patch application.");
             try
@@ -28,32 +28,41 @@ namespace DotCrosshair.Harmony
             }
         }
 
+        // Patch the OnHUD method of EntityPlayerLocal to replace crosshair logic
+        [HarmonyPatch(typeof(EntityPlayerLocal), nameof(EntityPlayerLocal.OnHUD))]
+        public static class CrosshairPatch
+        {
+            public static bool Prefix(EntityPlayerLocal __instance)
+            {
+                _logger.Info("CrosshairPatch: Prefix called on EntityPlayerLocal.OnHUD.");
+
+                // Suppress original crosshair drawing
+                DrawDotCrosshair();
+
+                // Return false to skip original OnHUD execution for crosshair rendering
+                return false;
+            }
+        }
+
         private static void DrawDotCrosshair()
         {
             _logger.Info("DrawDotCrosshair: Drawing a dot crosshair.");
 
-            var center = new Vector2(Screen.width / 2, Screen.height / 2);
+            // Get the center of the screen
+            Vector2 center = new Vector2(Screen.width / 2, Screen.height / 2);
             _logger.Info($"DrawDotCrosshair: Screen center calculated as {center}.");
 
-            const float dotSize = 5f;
+            // Define the size of the dot
+            float dotSize = 5f;
 
-            var dotRect = new Rect(center.x - dotSize / 2, center.y - dotSize / 2, dotSize, dotSize);
+            // Create a rectangle for the dot
+            Rect dotRect = new Rect(center.x - dotSize / 2, center.y - dotSize / 2, dotSize, dotSize);
             _logger.Info($"DrawDotCrosshair: Dot rectangle created at {dotRect}.");
 
+            // Draw the dot using a simple color
             GUI.color = Color.red;
             GUI.DrawTexture(dotRect, Texture2D.whiteTexture);
             _logger.Info("DrawDotCrosshair: Dot crosshair drawn.");
-        }
-
-        [HarmonyPatch(typeof(EntityPlayerLocal), nameof(EntityPlayerLocal.OnHUD))]
-        public static class CrosshairPatch
-        {
-            public static void Postfix(EntityPlayerLocal __instance)
-            {
-                _logger.Info("CrosshairPatch: Postfix called on EntityPlayerLocal.OnHUD.");
-
-                DrawDotCrosshair();
-            }
         }
 
         public class Init : IModApi

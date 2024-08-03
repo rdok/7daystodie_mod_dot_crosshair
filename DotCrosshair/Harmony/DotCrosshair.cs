@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using HarmonyLib;
 using UnityEngine;
 
@@ -28,18 +29,29 @@ namespace DotCrosshair.Harmony
             }
         }
 
-        // Patch the OnHUD method of EntityPlayerLocal to replace crosshair logic
-        [HarmonyPatch(typeof(EntityPlayerLocal), nameof(EntityPlayerLocal.OnHUD))]
+        // Patch the guiDrawCrosshair method of EntityPlayerLocal
+        [HarmonyPatch(typeof(EntityPlayerLocal), "guiDrawCrosshair")]
         public static class CrosshairPatch
         {
-            public static bool Prefix(EntityPlayerLocal __instance)
+            public static bool Prefix(EntityPlayerLocal __instance, NGuiWdwInGameHUD _guiInGame, bool bModalWindowOpen)
             {
-                _logger.Info("CrosshairPatch: Prefix called on EntityPlayerLocal.OnHUD.");
+                _logger.Info("CrosshairPatch: Prefix called on EntityPlayerLocal.guiDrawCrosshair.");
 
-                // Suppress original crosshair drawing
+                // Check if the player is holding a ranged weapon
+                var holdingItem = __instance.inventory.holdingItemItemValue;
+                var holdingRangedWeapon = holdingItem?.ItemClass?.Actions?
+                    .Any(action => action is ItemActionRanged) ?? false;
+
+                if (holdingRangedWeapon)
+                {
+                    _logger.Info("CrosshairPatch: Player is holding a ranged weapon, using default crosshair.");
+                    return true; // Allow default crosshair rendering
+                }
+
+                _logger.Info("CrosshairPatch: Player is not holding a ranged weapon, drawing dot crosshair.");
                 DrawDotCrosshair();
 
-                // Return false to skip original OnHUD execution for crosshair rendering
+                // Return false to skip original guiDrawCrosshair execution for crosshair rendering
                 return false;
             }
         }

@@ -17,14 +17,16 @@ namespace DotCrosshair.Harmony
             var holdingRangedWeapon = holdingItem?.ItemClass?.Actions?
                 .Any(action => action is ItemActionRanged) ?? false;
 
-            const bool callGuidDrawCrosshairFunction = true;
             const bool disableGuiDrawCrosshairFunction = false;
 
+#if RELEASE
+            const bool callGuidDrawCrosshairFunction = true;
             if (holdingRangedWeapon)
             {
                 Logger.Info("Patch: Player is holding a ranged weapon, using default crosshair.");
                 return callGuidDrawCrosshairFunction;
             }
+#endif
 
             if (!_guiInGame.showCrosshair || Event.current.type != EventType.Repaint ||
                 __instance.IsDead() ||

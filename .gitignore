@@ -1,0 +1,9 @@
+bin/
+obj/
+/packages/
+riderModule.iml
+/_ReSharper.Caches/
+DotCrosshair.sln.DotSettings.user
+node_modules/
+*7z
+dist/

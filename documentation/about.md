@@ -15,7 +15,13 @@
 
 - Replace the default (X) crosshair with a dot.
 - Preserves the default functionality for ranged weapons.
-- Compatible with other mods. Recommended mods to use in conjunction with this one, which have been manually verified for compatibility, include:
-    - [ImmersiveCrosshhair](https://www.nexusmods.com/7daystodie/mods/5601)
-    - [Danzo No Crosshair 1.2.1](https://www.nexusmods.com/Core/Libs/Common/Widgets/DownloadPopUp?id=17443&nmm=1&game_id=1059)
-- Check out the GIF showcase in the NexusMods Images section.
+- Compatible with any other mods.
+  
+## Recommended Mods
+> These mods have been manually verified for compatibility, though my gameplay.
+- [Dot Crosshair](https://www.nexusmods.com/7daystodie/mods/5640)
+- [Immersive Crosshair](https://www.nexusmods.com/7daystodie/mods/5601)
+- [Danzo No Crosshair 1.2.1](https://www.nexusmods.com/Core/Libs/Common/Widgets/DownloadPopUp?id=17443&nmm=1&game_id=1059)
+- [No Compass](https://www.nexusmods.com/7daystodie/mods/5528) 
+- [No GPS](https://www.nexusmods.com/7daystodie/mods/5525)
+- [Quick Continue](https://www.nexusmods.com/7daystodie/mods/5631) Recommended if you test lots of mods.

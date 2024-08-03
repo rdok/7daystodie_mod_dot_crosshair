@@ -11,12 +11,14 @@
 
 - 7daystodie Version: 1.0 (b333)
 - Install with [Vortex](https://www.nexusmods.com/about/vortex/).
-
 ## Features
+
+**Design Vision** [DOT instead of Crosshair](https://www.nexusmods.com/fallout4/mods/4340/)
 
 - Replace the default (X) crosshair with a dot.
 - Preserves the default functionality for ranged weapons.
 - Compatible with any other mods.
+
   
 ## Recommended Mods
 > These mods have been manually verified for compatibility, though my gameplay.

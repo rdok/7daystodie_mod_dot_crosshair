@@ -13,9 +13,11 @@
 - Inspiration: [DOT instead of Crosshair](https://www.nexusmods.com/fallout4/mods/4340/)
  
 ## Changelog
-### 1.0.1 - 03 Aug 2024
-- Decrease crosshair transparency by 25%.
-### 1.0.0 - 03 Aug 2024 
+#### 1.0.2 - 03 Aug 2024
+- Decreases crosshair transparency by 25%.
+#### 1.0.1 - 03 Aug 2024
+- Adds missing dot shadow and decreases size.
+#### 1.0.0 - 03 Aug 2024 
 - Replace the default (X) crosshair with a dot.
 - Preserves the default functionality for ranged weapons.
     - Optional Mod file: Dot Crosshair Global. Install this instead of the main version if you want the dot crosshair globally.

@@ -2,6 +2,7 @@
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props"
             Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')"/>
+
     <PropertyGroup>
         <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
         <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -13,7 +14,11 @@
         <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
         <FileAlignment>512</FileAlignment>
         <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+        <ModName>DotCrosshair</ModName>
+        <ModVersion>1.0.1</ModVersion>
+        <ModDescription>Replaces the default crosshair with a dot, except when using ranged weapons.</ModDescription>
     </PropertyGroup>
+
     <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
         <PlatformTarget>AnyCPU</PlatformTarget>
         <DebugSymbols>true</DebugSymbols>
@@ -33,9 +38,6 @@
         <DefineConstants>TRACE;RELEASE</DefineConstants>
         <OutputPath>bin\Release\</OutputPath>
         <AbsoluteOutputPath>$(MSBuildProjectDirectory)\$(OutputPath)</AbsoluteOutputPath>
-        <ModName>DotCrosshair</ModName>
-        <ModVersion>1.0.1</ModVersion>
-        <ModDescription>Replaces the default crosshair with a dot, except when using ranged weapons.</ModDescription>
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'ReleaseGlobalDot|AnyCPU' ">
         <PlatformTarget>AnyCPU</PlatformTarget>
@@ -93,7 +95,7 @@
 
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
 
-    <Target Name="AfterBuild" Condition=" '$(Configuration)' == 'ReleaseGlobalDot' OR '$(Configuration)' == 'Release' ">
+    <Target Name="AfterBuild" Condition=" '$(Configuration)' == 'ReleaseGlobalDot' OR '$(Configuration)' == 'Release'">
         <Exec
                 Command="npm run build --prefix -- $(AbsoluteOutputPath) $(ModName) $(ModName) &quot;$(ModDescription)&quot; $(ModVersion)"
                 WorkingDirectory="$(MSBuildProjectDirectory)\.."
@@ -101,9 +103,20 @@
         <Exec Command="npm run generate_readme" WorkingDirectory="$(MSBuildProjectDirectory)\.."/>
     </Target>
 
+    <Target Name="PostBuildDebug" AfterTargets="Build" Condition="'$(Configuration)' == 'Debug'">
+        <Message Text="Running post-build task to update ModInfo.xml..." Importance="high"/>
+
+        <XmlPoke XmlInputPath="$(OutputPath)\ModInfo.xml" Query="/xml/Name/@value" Value="$(ModName)"/>
+        <XmlPoke XmlInputPath="$(OutputPath)\ModInfo.xml" Query="/xml/DisplayName/@value" Value="$(ModDescription)"/>
+        <XmlPoke XmlInputPath="$(OutputPath)\ModInfo.xml" Query="/xml/Author/@value" Value="Rizarttt"/>
+        <XmlPoke XmlInputPath="$(OutputPath)\ModInfo.xml" Query="/xml/Description/@value" Value="$(ModName)"/>
+        <XmlPoke XmlInputPath="$(OutputPath)\ModInfo.xml" Query="/xml/Version/@value" Value="$(ModVersion)"/>
+    </Target>
+
+
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
          Other similar extension points exist, see Microsoft.Common.targets.
-    <Target Name="BeforeBuild">
+    <Target Name="BeforeBuild" >
     </Target>
     <Target Name="AfterBuild">
     </Target>

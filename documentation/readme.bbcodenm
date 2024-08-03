@@ -14,7 +14,11 @@
 [*] Install with [url=https://www.nexusmods.com/about/vortex/]Vortex[/url].
 [*] Inspiration: [url=https://www.nexusmods.com/fallout4/mods/4340/]DOT instead of Crosshair[/url]
 [/list]
-[size=5]Features[/size]
+[size=5]Changelog[/size]
+[size=4]1.0.1 - 03 Aug 2024[/size]
+[list]
+[*] Decrease crosshair transparency by 25%.[/list]
+[size=4]1.0.0 - 03 Aug 2024[/size]
 [list]
 [*] Replace the default (X) crosshair with a dot.
 [*] Preserves the default functionality for ranged weapons.

@@ -29,7 +29,7 @@ namespace DotCrosshair.Harmony
             GUI.color = fullyOpaqueBlack;
             GUI.DrawTexture(shadowRect, Texture2D.whiteTexture);
 
-            var crosshairAlpha = player.weaponCrossHairAlpha;
+            var crosshairAlpha = player.weaponCrossHairAlpha * 0.75f; 
             var crosshairColor = new Color(1f, 1f, 1f, crosshairAlpha);
             GUI.color = crosshairColor;
             GUI.DrawTexture(dotRect, Texture2D.whiteTexture);

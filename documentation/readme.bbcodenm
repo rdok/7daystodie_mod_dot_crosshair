@@ -17,7 +17,12 @@
 [list]
 [*] Replace default (X) crosshair with a dot.   
 [*] Preserves the default behavior for ranged weapons.
-[/list]
+[*] Should be compatible with any other mod. Mods I manually verified:
+[list]
+[*] See Images for GIF showcase.
+[*] [url=https://www.nexusmods.com/7daystodie/mods/5601]ImmersiveCrosshhair[/url]
+[*] [url=https://www.nexusmods.com/Core/Libs/Common/Widgets/DownloadPopUp?id=17443&nmm=1&game_id=1059]Danzo No Crosshair 1.2.1[/url]
+[/list][/list]
 [size=4]Sources[/size]
 [list]
 [*] [url=https://harmony.pardeike.net/articles/patching-postfix.html]Harmony Patching[/url]

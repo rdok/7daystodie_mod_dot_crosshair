@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <xml>
-    <Name value="{{PROJECT_NAME}}"/>
-    <DisplayName value="{{PROJECT_DISPLAY_NAME}}"/>
-    <Author value="Rizarttt"/>
-    <Description value="{{PROJECT_DESCRIPTION}}"/>
-    <Website value="https://www.nexusmods.com/7daystodie/mods/5640"/>
-    <Version value="{{VERSION_NAME}}"/>
+    <Name value=""/>
+    <DisplayName value=""/>
+    <Author value=""/>
+    <Description value=""/>
+    <Website value=""/>
+    <Version value=""/>
 </xml>

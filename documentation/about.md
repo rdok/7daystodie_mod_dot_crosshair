@@ -22,8 +22,7 @@
 - Preserves the default functionality for ranged weapons.
     - Optional Mod file: Dot Crosshair Global. Install this instead of the main version if you want the dot crosshair globally.
 - Compatible with any other mods.
-
-  
+ 
 ## Recommended Mods
 > These mods have been manually verified for compatibility, though my gameplay.
 - [Dot Crosshair](https://www.nexusmods.com/7daystodie/mods/5640)
@@ -32,3 +31,7 @@
 - [No Compass](https://www.nexusmods.com/7daystodie/mods/5528) 
 - [No GPS](https://www.nexusmods.com/7daystodie/mods/5525)
 - [Quick Continue](https://www.nexusmods.com/7daystodie/mods/5631) Recommended if you test lots of mods.
+
+### Credits
+- [MrSamuelAdams1992](https://next.nexusmods.com/profile/MrSamuelAdams1992/about-me?gameId=1059) for his feedback on improving this mod and bug reporting.
+  

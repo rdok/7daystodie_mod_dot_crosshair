@@ -1,7 +1,6 @@
 # 7 Days to Die Mod - Dot Crosshair
 
-[![nexus-mods-page](https://img.shields.io/badge/Nexus%20Mod-Dot%20Crosshair%20-orange?style=flat-square&logo=spinrilla)](https://www.nexusmods.com/7daystodie/mods/5640)
-[![github-repository](https://img.shields.io/badge/GitHub-Repository-green?style=flat-square&logo=github)](https://github.com/rdok/7daystodie_mod_dot_crosshair)
+[![nexus-mods-collection-immersive-hud](https://img.shields.io/badge/Nexus%20Mods%20Collection-Immersive%20HUD%20-orange?style=flat-square&logo=spinrilla)](https://next.nexusmods.com/7daystodie/collections/epfqzi) [![nexus-mods-page](https://img.shields.io/badge/Nexus%20Mod-Dot%20Crosshair%20-orange?style=flat-square&logo=spinrilla)](https://www.nexusmods.com/7daystodie/mods/5640) [![github-repository](https://img.shields.io/badge/GitHub-Repository-green?style=flat-square&logo=github)](https://github.com/rdok/7daystodie_mod_dot_crosshair)
 
 > **Dot Crosshair:** Replaces the default crosshair with a dot, except when using ranged weapons.
 > **EAC Caveat:** This mod uses custom code that is not compatible with Easy Anti-Cheat (EAC).
@@ -23,15 +22,6 @@
     - Optional Mod file: Dot Crosshair Global. Install this instead of the main version if you want the dot crosshair globally.
 - Compatible with any other mods.
  
-## Recommended Mods
-> These mods have been manually verified for compatibility, though my gameplay.
-- [Dot Crosshair](https://www.nexusmods.com/7daystodie/mods/5640)
-- [Immersive Crosshair](https://www.nexusmods.com/7daystodie/mods/5601)
-- [Danzo No Crosshair 1.2.1](https://www.nexusmods.com/Core/Libs/Common/Widgets/DownloadPopUp?id=17443&nmm=1&game_id=1059)
-- [No Compass](https://www.nexusmods.com/7daystodie/mods/5528) 
-- [No GPS](https://www.nexusmods.com/7daystodie/mods/5525)
-- [Quick Continue](https://www.nexusmods.com/7daystodie/mods/5631) Recommended if you test lots of mods.
-
 ### Credits
 - [MrSamuelAdams1992](https://next.nexusmods.com/profile/MrSamuelAdams1992/about-me?gameId=1059) for his feedback on improving this mod and bug reporting.
   

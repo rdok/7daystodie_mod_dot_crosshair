@@ -15,7 +15,7 @@
         <FileAlignment>512</FileAlignment>
         <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
         <ModName>DotCrosshair</ModName>
-        <ModVersion>1.0.1</ModVersion>
+        <ModVersion>1.0.3</ModVersion>
         <ModDescription>Replaces the default crosshair with a dot, except when using ranged weapons.</ModDescription>
     </PropertyGroup>
 
@@ -49,7 +49,7 @@
         <OutputPath>bin\ReleaseGlobalDot\</OutputPath>
         <AbsoluteOutputPath>$(MSBuildProjectDirectory)\$(OutputPath)</AbsoluteOutputPath>
         <ModName>DotCrosshairGlobal</ModName>
-        <ModVersion>1.0.0</ModVersion>
+        <ModVersion>1.0.1</ModVersion>
         <ModDescription>Replaces the default crosshair with a dot, globally.</ModDescription>
     </PropertyGroup>
     <ItemGroup>
@@ -61,7 +61,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <Content Include="ModInfo.xml">
+        <Content Include="ModInfo.xml"> 
             <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         </Content>
     </ItemGroup>
@@ -93,7 +93,7 @@
         </Reference>
     </ItemGroup>
 
-    <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
+    <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/> 
 
     <Target Name="AfterBuild" Condition=" '$(Configuration)' == 'ReleaseGlobalDot' OR '$(Configuration)' == 'Release'">
         <Exec
@@ -103,7 +103,7 @@
         <Exec Command="npm run generate_readme" WorkingDirectory="$(MSBuildProjectDirectory)\.."/>
     </Target>
 
-    <Target Name="PostBuildDebug" AfterTargets="Build" Condition="'$(Configuration)' == 'Debug'">
+    <Target Name="AfterBuild" Condition=" '$(Configuration)' == 'Debug' OR '$(Configuration)' == 'Release' OR '$(Configuration)' == 'ReleaseGlobalDot'">
         <Message Text="Running post-build task to update ModInfo.xml..." Importance="high"/>
 
         <XmlPoke XmlInputPath="$(OutputPath)\ModInfo.xml" Query="/xml/Name/@value" Value="$(ModName)"/>
@@ -111,6 +111,14 @@
         <XmlPoke XmlInputPath="$(OutputPath)\ModInfo.xml" Query="/xml/Author/@value" Value="Rizarttt"/>
         <XmlPoke XmlInputPath="$(OutputPath)\ModInfo.xml" Query="/xml/Description/@value" Value="$(ModName)"/>
         <XmlPoke XmlInputPath="$(OutputPath)\ModInfo.xml" Query="/xml/Version/@value" Value="$(ModVersion)"/>
+        <XmlPoke XmlInputPath="$(OutputPath)\ModInfo.xml" Query="/xml/Website/@value" Value="https://www.nexusmods.com/7daystodie/mods/5640"/>
+        
+        <Exec
+                Condition=" '$(Configuration)' != 'Debug' "
+                Command="npm run build --prefix -- $(AbsoluteOutputPath) $(ModName) $(ModVersion)"
+                WorkingDirectory="$(MSBuildProjectDirectory)\.."
+        />
+        <Exec Command="npm run generate_readme" WorkingDirectory="$(MSBuildProjectDirectory)\.."/> 
     </Target>
 
 

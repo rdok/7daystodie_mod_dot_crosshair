@@ -8,7 +8,6 @@ if (args.length < 2) {
     process.exit(1);
 }
 
-console.debug(args);
 const absoluteOutputPath = args[0];
 const newModName = args[1];
 const newVersion = args[2];

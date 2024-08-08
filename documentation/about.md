@@ -12,6 +12,10 @@
 - Inspiration: [DOT instead of Crosshair](https://www.nexusmods.com/fallout4/mods/4340/)
  
 ## Changelog
+#### 1.0.3 Main Version & 1.0.1 Global Dot - 08 Aug 2024
+- Decreases dot crosshair size by 14%
+- Decreases dot crosshair shadow size by 20%, better alignment with dot.
+- [As per discussion.](https://www.nexusmods.com/7daystodie/mods/5640?tab=posts&jump_to_comment=142559019)
 #### 1.0.2 - 03 Aug 2024
 - Decreases crosshair transparency by 25%.
 #### 1.0.1 - 03 Aug 2024

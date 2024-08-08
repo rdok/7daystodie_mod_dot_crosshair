@@ -13,9 +13,9 @@ namespace DotCrosshair.Harmony
             var center = new Vector2(Screen.width / 2, Screen.height / 2);
             Logger.Info($"DotCrosshair: Screen center calculated as {center}.");
 
-            const float dotSize = 6f;
-            var shadowOffset = new Vector2(2f, 2f);
-            const float shadowSize = .5f;
+            const float dotSize = 5f;
+            var shadowOffset = new Vector2(0.5f, 1.5f);
+            const float shadowSize = .1f;
 
             var dotRect = new Rect(center.x - dotSize / 2, center.y - dotSize / 2, dotSize, dotSize);
             var shadowRect = new Rect(

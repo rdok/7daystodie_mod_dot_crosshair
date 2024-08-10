@@ -16,10 +16,10 @@
 - The mod overlooks tools better for killing zombies, like machetes.
  
 ## Changelog
-#### 1.0.4 Main Version & 1.0.2 Global Dot 10 Aug 2024
+#### 1.0.4 Main Version
 - fix: Replace the crosshair when holding any resource based tool instead of non-ranged weapons.
   - Apparently there are ranged repair tools such as nail guns 
-  - Many thanks to [MrSamuelAdams1992](https://next.nexusmods.com/profile/MrSamuelAdams1992/about-me?gameId=1059) for identifying & reporting this issue
+  - Many thanks to [MrSamuelAdams1992](https://next.nexusmods.com/profile/MrSamuelAdams1992/about-me?gameId=1059) for [reporting this issue](https://www.nexusmods.com/7daystodie/mods/5601?tab=posts&jump_to_comment=142699761)
 #### 1.0.3 Main Version & 1.0.1 Global Dot - 08 Aug 2024
 - Decreases dot crosshair size by 14%
 - Decreases dot crosshair shadow size by 20%, better alignment with dot.

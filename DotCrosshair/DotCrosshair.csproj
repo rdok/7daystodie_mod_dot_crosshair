@@ -49,7 +49,7 @@
         <OutputPath>bin\ReleaseGlobalDot\</OutputPath>
         <AbsoluteOutputPath>$(MSBuildProjectDirectory)\$(OutputPath)</AbsoluteOutputPath>
         <ModName>DotCrosshairGlobal</ModName>
-        <ModVersion>1.0.2</ModVersion> 
+        <ModVersion>1.0.1</ModVersion> 
         <ModDescription>Replaces the default crosshair with a dot, globally.</ModDescription>
     </PropertyGroup>
     <ItemGroup>

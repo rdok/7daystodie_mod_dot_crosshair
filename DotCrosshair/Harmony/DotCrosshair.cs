@@ -4,14 +4,9 @@ namespace DotCrosshair.Harmony
 {
     public static class DotCrosshair
     {
-        private static readonly ILogger Logger = new Logger();
-
         public static void Draw(EntityPlayerLocal player)
         {
-            Logger.Info("DotCrosshair: Drawing a dot crosshair with shadow.");
-
             var center = new Vector2(Screen.width / 2, Screen.height / 2);
-            Logger.Info($"DotCrosshair: Screen center calculated as {center}.");
 
             const float dotSize = 5f;
             var shadowOffset = new Vector2(0.5f, 1.5f);
@@ -33,8 +28,6 @@ namespace DotCrosshair.Harmony
             var crosshairColor = new Color(1f, 1f, 1f, crosshairAlpha);
             GUI.color = crosshairColor;
             GUI.DrawTexture(dotRect, Texture2D.whiteTexture);
-
-            Logger.Info("DotCrosshair: Dot crosshair with shadow drawn.");
         }
     }
 }

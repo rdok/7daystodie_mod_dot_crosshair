@@ -14,6 +14,12 @@
 [*] Inspiration: [url=https://www.nexusmods.com/fallout4/mods/4340/]DOT instead of Crosshair[/url]
 [/list]
 [size=5]Changelog[/size]
+[size=3]1.0.4 Main Version & 1.0.2 Global Dot 10 Aug 2024[/size]
+[list]
+[*] fix: Replace the crosshair when holding any tool instead of non-ranged weapons
+[list]
+[*] Apparently there are ranged repair tools such as nail guns 
+[*] Many thanks to [url=https://next.nexusmods.com/profile/MrSamuelAdams1992/about-me?gameId=1059]MrSamuelAdams1992[/url] for identifying & reporting this issue[/list][/list]
 [size=3]1.0.3 Main Version & 1.0.1 Global Dot - 08 Aug 2024[/size]
 [list]
 [*] Decreases dot crosshair size by 14%

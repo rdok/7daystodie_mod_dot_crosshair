@@ -3,21 +3,27 @@
 [url=https://next.nexusmods.com/7daystodie/collections/epfqzi][img]https://img.shields.io/badge/Nexus%20Mods%20Collection-Immersive%20HUD%20-orange?style=flat-square&logo=spinrilla[/img][/url] [url=https://www.nexusmods.com/7daystodie/mods/5640][img]https://img.shields.io/badge/Nexus%20Mod-Dot%20Crosshair%20-orange?style=flat-square&logo=spinrilla[/img][/url] [url=https://github.com/rdok/7daystodie_mod_dot_crosshair][img]https://img.shields.io/badge/GitHub-Repository-green?style=flat-square&logo=github[/img][/url]
 
 [quote]
-[b]Dot Crosshair:[/b] Replaces the default crosshair with a dot when using any tool.
+[b]Dot Crosshair:[/b] Replaces the default crosshair with a dot universally.
 [b]EAC Caveat:[/b] This mod uses custom code that is not compatible with Easy Anti-Cheat (EAC).
 [/quote]
 [url=https://www.nexusmods.com/7daystodie/mods/5640][img]https://github.com/rdok/7daystodie_mod_dot_crosshair/blob/main/documentation/showcase.gif?raw=true[/img][/url]
 
 [size=5]Features[/size]
 [list]
-[*] Replaces the default crosshair with a dot when using any tool.
-[*] Game Version: 1.0 (b333). Install with [url=https://www.nexusmods.com/about/vortex/]Vortex[/url].
-[*] The optional [b]Global Dot[/b] file replaces the crosshair in all scenarios. Install either the main or optional version, not both.
+[*] Replaces the default crosshair with a dot universally.
 [*] [url=https://www.nexusmods.com/7daystodie/mods/5601]Immersive Crosshair[/url] and [url=https://www.nexusmods.com/7daystodie/mods/5640]Dot Crosshair[/url] mods are designed to complement each other.
-[*] The mod overlooks tools better for killing zombies, like machetes.
+[list]
+[*] Hides crosshair when not having an interactable. E.g. using weapons with iron sights.[/list]
+[*] Game Version: 1.0 (b333). Install with [url=https://www.nexusmods.com/about/vortex/]Vortex[/url].
 [/list]
 [size=5]Changelog[/size]
-[size=3]1.0.4 Main Version[/size]
+[size=3]1.1.0 Main Version - 12-Aug-24[/size]
+[list]
+[*] feat: Deprecated rendering logic using resource tools; use to Immersive Crosshair instead.
+[list]
+[*] fix: Resolved an issue where the Immersive Crosshair enabled the crosshair, but the dot failed to render.[/list]
+[*] feat: Global version deprecated; Dot Crosshair now replaces the crosshair universally.[/list]
+[size=3]1.0.4 Main Version - 10-Aug-24[/size]
 [list]
 [*] fix: Replace the crosshair when holding any resource based tool instead of non-ranged weapons.
 [list]

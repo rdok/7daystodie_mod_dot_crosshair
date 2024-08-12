@@ -17,30 +17,30 @@
 [*] Game Version: 1.0 (b333). Install with [url=https://www.nexusmods.com/about/vortex/]Vortex[/url].
 [/list]
 [size=5]Changelog[/size]
-[size=3]1.1.0 Main Version - 12-Aug-24[/size]
+[size=3]v1.1.0 12-Aug-24[/size]
 [list]
-[*] feat: Deprecated rendering logic using resource tools; use to Immersive Crosshair instead.
+[*] feat: Deprecated rendering logic using resource tools; use Immersive Crosshair instead.
 [list]
 [*] fix: Resolved an issue where the Immersive Crosshair enabled the crosshair, but the dot failed to render.[/list]
 [*] feat: Global version deprecated; Dot Crosshair now replaces the crosshair universally.[/list]
-[size=3]1.0.4 Main Version - 10-Aug-24[/size]
+[size=3]v1.0.4 Main Version 10-Aug-24[/size]
 [list]
 [*] fix: Replace the crosshair when holding any resource based tool instead of non-ranged weapons.
 [list]
 [*] Apparently there are ranged repair tools such as nail guns 
 [*] Many thanks to [url=https://next.nexusmods.com/profile/MrSamuelAdams1992/about-me?gameId=1059]MrSamuelAdams1992[/url] for [url=https://www.nexusmods.com/7daystodie/mods/5601?tab=posts&jump_to_comment=142699761]reporting this issue[/url][/list][/list]
-[size=3]1.0.3 Main Version & 1.0.1 Global Dot - 08 Aug 2024[/size]
+[size=3]v1.0.3 Main Version & v11.0.1 Global Dot 08 Aug 2024[/size]
 [list]
 [*] Decreases dot crosshair size by 14%
 [*] Decreases dot crosshair shadow size by 20%, better alignment with dot.
 [*] [url=https://www.nexusmods.com/7daystodie/mods/5640?tab=posts&jump_to_comment=142559019]As per discussion.[/url][/list]
-[size=3]1.0.2 - 03 Aug 2024[/size]
+[size=3]v1.0.2 03 Aug 2024[/size]
 [list]
 [*] Decreases crosshair transparency by 25%.[/list]
-[size=3]1.0.1 - 03 Aug 2024[/size]
+[size=3]v1.0.1 03 Aug 2024[/size]
 [list]
 [*] Adds missing dot shadow and decreases size.[/list]
-[size=3]1.0.0 - 03 Aug 2024[/size]
+[size=3]v1.0.0 03 Aug 2024[/size]
 [list]
 [*] Replace the default (X) crosshair with a dot.
 [*] Preserves the default functionality for ranged weapons.

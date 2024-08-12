@@ -14,23 +14,23 @@
 - Game Version: 1.0 (b333). Install with [Vortex](https://www.nexusmods.com/about/vortex/).
  
 ## Changelog
-#### 1.1.0 Main Version - 12-Aug-24
-- feat: Deprecated rendering logic using resource tools; use to Immersive Crosshair instead.
+#### v1.1.0 12-Aug-24
+- feat: Deprecated rendering logic using tools; use Immersive Crosshair instead.
   - fix: Resolved an issue where the Immersive Crosshair enabled the crosshair, but the dot failed to render.
 - feat: Global version deprecated; Dot Crosshair now replaces the crosshair universally.
-#### 1.0.4 Main Version - 10-Aug-24
+#### v1.0.4 Main Version 10-Aug-24
 - fix: Replace the crosshair when holding any resource based tool instead of non-ranged weapons.
   - Apparently there are ranged repair tools such as nail guns 
   - Many thanks to [MrSamuelAdams1992](https://next.nexusmods.com/profile/MrSamuelAdams1992/about-me?gameId=1059) for [reporting this issue](https://www.nexusmods.com/7daystodie/mods/5601?tab=posts&jump_to_comment=142699761)
-#### 1.0.3 Main Version & 1.0.1 Global Dot - 08 Aug 2024
+#### v1.0.3 Main Version & v11.0.1 Global Dot 08 Aug 2024
 - Decreases dot crosshair size by 14%
 - Decreases dot crosshair shadow size by 20%, better alignment with dot.
 - [As per discussion.](https://www.nexusmods.com/7daystodie/mods/5640?tab=posts&jump_to_comment=142559019)
-#### 1.0.2 - 03 Aug 2024
+#### v1.0.2 03 Aug 2024
 - Decreases crosshair transparency by 25%.
-#### 1.0.1 - 03 Aug 2024
+#### v1.0.1 03 Aug 2024
 - Adds missing dot shadow and decreases size.
-#### 1.0.0 - 03 Aug 2024 
+#### v1.0.0 03 Aug 2024 
 - Replace the default (X) crosshair with a dot.
 - Preserves the default functionality for ranged weapons.
     - Optional Mod file: Dot Crosshair Global. Install this instead of the main version if you want the dot crosshair globally.

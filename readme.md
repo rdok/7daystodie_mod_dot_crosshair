@@ -12,7 +12,7 @@
 - Replaces the default crosshair with a dot universally.
 - [Immersive Crosshair](https://www.nexusmods.com/7daystodie/mods/5601) and [Dot Crosshair](https://www.nexusmods.com/7daystodie/mods/5640) mods are designed to complement each other.
   - Hides crosshair when not having an interactable. E.g. using weapons with iron sights.
-- Game Version: 1.0 (b333). Install with [Vortex](https://www.nexusmods.com/about/vortex/).
+- Game Version: 1.0. Install with [Vortex](https://www.nexusmods.com/about/vortex/).
  
 ## Changelog
 #### v1.1.0 12-Aug-24

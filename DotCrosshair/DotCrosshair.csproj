@@ -15,7 +15,7 @@
         <FileAlignment>512</FileAlignment>
         <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
         <ModName>DotCrosshair</ModName>
-        <ModVersion>1.0.4</ModVersion>
+        <ModVersion>0.0.1</ModVersion>
         <ModDescription>Replaces the default crosshair with a dot, except when using ranged weapons.</ModDescription>
     </PropertyGroup>
 
@@ -38,7 +38,7 @@
         <OutputPath>bin\Main\</OutputPath>
         <AbsoluteOutputPath>$(MSBuildProjectDirectory)\$(OutputPath)</AbsoluteOutputPath>
         <ModName>DotCrosshair</ModName>
-        <ModVersion>1.1.0</ModVersion>
+        <ModVersion>1.2.0</ModVersion>
         <ModDescription>Replaces the default crosshair with a dot, except when using ranged weapons.</ModDescription>
     </PropertyGroup>
     <ItemGroup>
@@ -50,7 +50,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <Content Include="Config\**\*">
+        <Content Include="Config\**\*"> 
             <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         </Content>
         <Content Include="ModInfo.xml">

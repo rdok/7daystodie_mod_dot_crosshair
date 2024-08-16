@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModSettings>
+    <Global>
+        <Tab name="General">
+            <Category name="Dot" displayKey="dotCategoryDisplayKey" tooltipKey="dotCategoryTooltipKey">
+                <Slider name="Size" displayKey="dotSizeDisplayKey" tooltipKey="dotSizeTooltipKey" defaultValue="5">
+                    <Property type="incrementalValuesInt" increment="1" minValue="0" maxValue="10"/>
+                </Slider>
+                <Slider name="Red" displayKey="dotRedDisplayKey" tooltipKey="dotRedTooltipKey" defaultValue="1">
+                    <Property type="incrementalValuesInt" increment="1" minValue="0" maxValue="255"/>
+                </Slider>
+                <Slider name="Green" displayKey="dotGreenDisplayKey" tooltipKey="dotGreenTooltipKey" defaultValue="1">
+                    <Property type="incrementalValuesInt" increment="1" minValue="0" maxValue="255"/>
+                </Slider>
+                <Slider name="Blue" displayKey="dotBlueDisplayKey" tooltipKey="dotBlueTooltipKey" defaultValue="1">
+                    <Property type="incrementalValuesInt" increment="1" minValue="0" maxValue="255"/>
+                </Slider>
+                <Slider name="Alpha" displayKey="dotAlphaDisplayKey" tooltipKey="dotAlphaTooltipKey" defaultValue="1">
+                    <Property type="incrementalValuesFloat" increment="0.10" minValue="0" maxValue="1"/>
+                </Slider>
+            </Category>
+            <Category name="Shadow" displayKey="shadowCategoryDisplayKey" tooltipKey="shadowCategoryTooltipKey">
+                <Switch
+                        name="Enabled"
+                        displayKey="shadowEnabledDisplayKey"
+                        tooltipKey="shadowEnabledToolTip"
+                        defaultValue="0.1"
+                        leftValue="false"
+                        rightValue="true"
+                />
+                <Slider name="Size" displayKey="shadowSizeDisplayKey" tooltipKey="shadowSizeToolTip" defaultValue="0.1">
+                    <Property type="incrementalValuesFloat" increment="0.01" minValue="0" maxValue="1"/>
+                </Slider>
+                <Slider name="OffsetX" displayKey="shadowOffsetXDisplayKey" tooltipKey="shadowOffsetXToolTip" defaultValue="0.5">
+                    <Property type="incrementalValuesFloat" increment="0.10" minValue="-10" maxValue="10"/>
+                </Slider>
+                <Slider name="OffsetY" displayKey="shadowOffsetYDisplayKey" tooltipKey="shadowOffsetYToolTip" defaultValue="1.5">
+                    <Property type="incrementalValuesFloat" increment="0.10" minValue="-10" maxValue="10"/>
+                </Slider>
+            </Category>
+        </Tab>
+    </Global>
+</ModSettings>

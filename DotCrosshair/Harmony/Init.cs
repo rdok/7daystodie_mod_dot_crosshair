@@ -73,13 +73,6 @@ namespace DotCrosshair.Harmony
             DotCrosshair.RedColour = colour;
         }
 
-        private static void DotAlphaChannelChanged(IGlobalModSetting setting, string value)
-        {
-            Logger.Info($"setting.Name: {setting.Name}. New Value: {value}");
-            byte.TryParse(value, out var alphaChannel);
-            DotCrosshair.AlphaChannel = alphaChannel;
-        }
-
         private static void DotGreenColorChanged(IGlobalModSetting setting, string value)
         {
             Logger.Info($"setting.Name: {setting.Name}. New Value: {value}");
@@ -92,6 +85,13 @@ namespace DotCrosshair.Harmony
             Logger.Info($"setting.Name: {setting.Name}. New Value: {value}");
             byte.TryParse(value, out var colour);
             DotCrosshair.BlueColour = colour;
+        }
+
+        private static void DotAlphaChannelChanged(IGlobalModSetting setting, string value)
+        {
+            Logger.Info($"setting.Name: {setting.Name}. New Value: {value}");
+            float.TryParse(value, out var alphaChannel);
+            DotCrosshair.AlphaChannel = alphaChannel;
         }
 
 

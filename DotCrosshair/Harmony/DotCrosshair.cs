@@ -13,7 +13,7 @@ namespace DotCrosshair.Harmony
         public static float AlphaChannel { get; set; } = 0.75f;
 
         public static float ShadowSize { get; set; } = .1f;
-        public static bool ShadowEnabled { get; set; }
+        public static bool ShadowEnabled { get; set; } = true;
         public static float ShadowOffsetX { get; set; } = .5f;
         public static float ShadowOffsetY { get; set; } = 1.5f;
 
@@ -38,7 +38,8 @@ namespace DotCrosshair.Harmony
                 GUI.DrawTexture(shadowRect, Texture2D.whiteTexture);
             }
 
-            var alphaChannel = (byte)(AlphaChannel * 255f);
+            var alphaChannel = (byte)(AlphaChannel * 255);
+            
             var crosshairColor = new Color32(RedColour, GreenColour, BlueColour, alphaChannel);
 
             GUI.color = crosshairColor;

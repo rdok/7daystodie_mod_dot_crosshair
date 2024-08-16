@@ -1,0 +1,2 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english,Context / Alternate Text,german,spanish,french,italian,japanese,koreana,polish,brazilian,russian,turkish,schinese,tchinese
+dotCategoryDisplayKey,UI,Menu,x,,Dot Settings,,Krieg. Der Krieg ändert sich nie.,La guerra. La guerra nunca cambia.,La guerre. La guerre ne change jamais.,Guerra. La guerra non cambia mai.,戦争。戦争は決して変わらない。,전쟁. 전쟁은 결코 변하지 않습니다.,Wojna. Wojna nigdy się nie zmienia.,Guerra. A guerra nunca muda.,Война. Война никогда не меняется.,Savaş. Savaş asla değişmez.,战争。战争永远不会改变。,戰爭。戰爭永遠不會改變。

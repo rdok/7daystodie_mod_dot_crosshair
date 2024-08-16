@@ -10,13 +10,33 @@
 
 [size=5]Features[/size]
 [list]
-[*] Replaces the default crosshair with a dot universally.
+[*] Universally replaces the default crosshair with a dot.
 [*] [url=https://www.nexusmods.com/7daystodie/mods/5601]Immersive Crosshair[/url] and [url=https://www.nexusmods.com/7daystodie/mods/5640]Dot Crosshair[/url] mods are designed to complement each other.
 [list]
 [*] Hides crosshair when not having an interactable. E.g. using weapons with iron sights.[/list]
+[*] Now, features in-game, optional, configuration options. Requires [url=https://www.nexusmods.com/7daystodie/mods/4017]Gears[/url] & [url=https://www.nexusmods.com/7daystodie/mods/2409/]Quartz[/url]
+[list]
+[*] Use https://www.color-hex.com/ to generate your RGBA color.
+[*] The mod will still work with the default values if you are not using Gears.
+[*] See Videos tab on this NexusMods page for an example of [url=https://www.nexusmods.com/7daystodie/mods/5640?tab=videos#lg=2&slide=0]customizing the crosshair[/url] to use the Fallout 4 green color.[/list]
 [*] Game Version: 1.0. Install with [url=https://www.nexusmods.com/about/vortex/]Vortex[/url].
 [/list]
+
+[size=4]Development[/size]
+[list]
+[*] Use Google sheet to edit the Localization.txt. Just add the english versions.
+[*] To translate to all supported in game languages, using Google Translate API:
+[list]
+[*] [b]npm run translate:localization[/b] everytime you add a new localization.
+[*] This will translate and replace in place the Localization.txt
+[/list][/list]
 [size=5]Changelog[/size]
+[size=3]v1.2.0 16-Aug-24[/size]
+[list]
+[*] feat: Optionally configurable dot size, color, and shadow using [url=https://www.nexusmods.com/7daystodie/mods/4017]Gears - A Mod Settings Manager[/url]
+[list]
+[*] Use https://www.color-hex.com/ to generate your RGBA color.
+[*] The mod will still work with the default values if you are not using Gears.[/list][/list]
 [size=3]v1.1.0 12-Aug-24[/size]
 [list]
 [*] feat: Deprecated rendering logic using resource tools; use Immersive Crosshair instead.
@@ -47,9 +67,4 @@
 [list]
 [*] Optional Mod file: Dot Crosshair Global. Install this instead of the main version if you want the dot crosshair globally.[/list]
 [*] Compatible with any other mods.
-[/list]
-[size=4]Credits[/size]
-[list]
-[*] [url=https://next.nexusmods.com/profile/MrSamuelAdams1992/about-me?gameId=1059]MrSamuelAdams1992[/url] for his feedback on improving this mod and bug reporting.
-[*] Inspiration: [url=https://www.nexusmods.com/fallout4/mods/4340/]DOT instead of Crosshair[/url]
 [/list]

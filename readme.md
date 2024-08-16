@@ -18,6 +18,8 @@
   - See Videos tab on this NexusMods page for an example of [customizing the crosshair](https://www.nexusmods.com/7daystodie/mods/5640?tab=videos#lg=2&slide=0) to use the Fallout 4 green color.
 - Game Version: 1.0. Install with [Vortex](https://www.nexusmods.com/about/vortex/).
 
+#### How-to Video: Customize Your Dot Crosshair to Fallout 4 Green in 7 Days to Die
+[![How to Change Your Dot Crosshair Color to Fallout 4 Green in 7 Days to Die - Dot Crosshair Mod](http://img.youtube.com/vi/Ln6IqxQGtnI/0.jpg)](https://youtu.be/Ln6IqxQGtnI)
 
 ### Development
 - Use Google sheet to edit the Localization.txt. Just add the english versions.

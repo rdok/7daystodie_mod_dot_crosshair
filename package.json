@@ -7,8 +7,8 @@
   "name": "7daystodie_mod_dot_crosshair",
   "license": "GPL-3.0",
   "devDependencies": {
-    "@google-cloud/translate": "^8.4.0",
     "7z-bin": "Nexus-Mods/7z-bin",
+    "@google-cloud/translate": "^8.4.0",
     "dotenv": "^16.4.5",
     "fast-csv": "^5.0.1",
     "npm-check": "^6.0.1",

@@ -3,7 +3,7 @@
 
 [![nexus-mods-collection-immersive-hud](https://img.shields.io/badge/Nexus%20Mods%20Collection-Immersive%20HUD%20-orange?style=flat-square&logo=spinrilla)](https://next.nexusmods.com/7daystodie/collections/epfqzi) [![nexus-mods-page](https://img.shields.io/badge/Nexus%20Mod-Dot%20Crosshair%20-orange?style=flat-square&logo=spinrilla)](https://www.nexusmods.com/7daystodie/mods/5640) [![github-repository](https://img.shields.io/badge/GitHub-Repository-green?style=flat-square&logo=github)](https://github.com/rdok/7daystodie_mod_dot_crosshair)
 
-> **Dot Crosshair:** Replaces the default crosshair with a dot universally.
+> **Dot Crosshair:** Universally replaces the default crosshair with a dot.  
 > **EAC Caveat:** This mod uses custom code that is not compatible with Easy Anti-Cheat (EAC).
 
 [![Dot Crosshairs Showcase](https://github.com/rdok/7daystodie_mod_dot_crosshair/blob/main/documentation/showcase.gif?raw=true)](https://www.nexusmods.com/7daystodie/mods/5640)
@@ -13,25 +13,25 @@
 - [Immersive Crosshair](https://www.nexusmods.com/7daystodie/mods/5601) and [Dot Crosshair](https://www.nexusmods.com/7daystodie/mods/5640) mods are designed to complement each other.
   - Hides crosshair when not having an interactable. E.g. using weapons with iron sights.
 - Now, features in-game, optional, configuration options. Requires [Gears](https://www.nexusmods.com/7daystodie/mods/4017) & [Quartz](https://www.nexusmods.com/7daystodie/mods/2409/)
-  - Use https://www.color-hex.com/ to generate your RGBA color.
+  - For an example of how to customize the crosshair with Fallout 4’s signature green color, visit the [Videos tab ](https://www.nexusmods.com/7daystodie/mods/5640?tab=videos#lg=2&slide=0).
+  - Use [https://www.color-hex.com/](https://www.color-hex.com/) to generate your RGBA color.
   - The mod will still work with the default values if you are not using Gears.
-  - See Videos tab on this NexusMods page for an example of [customizing the crosshair](https://www.nexusmods.com/7daystodie/mods/5640?tab=videos#lg=2&slide=0) to use the Fallout 4 green color.
 - Game Version: 1.0. Install with [Vortex](https://www.nexusmods.com/about/vortex/).
-
-#### How-to Video: Customize Your Dot Crosshair to Fallout 4 Green in 7 Days to Die
-[![How to Change Your Dot Crosshair Color to Fallout 4 Green in 7 Days to Die - Dot Crosshair Mod](http://img.youtube.com/vi/Ln6IqxQGtnI/0.jpg)](https://youtu.be/Ln6IqxQGtnI)
 
 ### Development
 - Use Google sheet to edit the Localization.txt. Just add the english versions.
 - To translate to all supported in game languages, using Google Translate API:
-  - `npm run translate:localization` everytime you add a new localization.
-  - This will translate and replace in place the Localization.txt
+  - `npm run translate:localization` everytime you add a new localization record.
+  - This will translate and replace in place all the Localization.txt records.
 
 ## Changelog
+#### v1.2.1 16-Aug-24
+- fix: Use default (white) color when not using Gears.
 #### v1.2.0 16-Aug-24
 - feat: Optionally configurable dot size, color, and shadow using [Gears - A Mod Settings Manager](https://www.nexusmods.com/7daystodie/mods/4017)
   - Use https://www.color-hex.com/ to generate your RGBA color.
   - The mod will still work with the default values if you are not using Gears.
+  - Translated to all in game languages.
 #### v1.1.0 12-Aug-24
 - feat: Deprecated rendering logic using resource tools; use Immersive Crosshair instead.
   - fix: Resolved an issue where the Immersive Crosshair enabled the crosshair, but the dot failed to render.

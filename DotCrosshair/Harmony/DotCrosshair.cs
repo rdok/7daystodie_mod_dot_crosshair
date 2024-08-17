@@ -7,9 +7,9 @@ namespace DotCrosshair.Harmony
         private static readonly ILogger Logger = new Logger();
 
         public static float DotSize { get; set; } = 5f;
-        public static byte RedColour { get; set; } = 1;
-        public static byte GreenColour { get; set; } = 1;
-        public static byte BlueColour { get; set; } = 1;
+        public static byte RedColour { get; set; } = 255;
+        public static byte GreenColour { get; set; } = 255;
+        public static byte BlueColour { get; set; } = 255;
         public static float AlphaChannel { get; set; } = 0.75f;
 
         public static float ShadowSize { get; set; } = .1f;

@@ -16,7 +16,7 @@
         <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
         <ModName>DotCrosshair</ModName>
         <ModVersion>0.0.1</ModVersion>
-        <ModDescription>Replaces the default crosshair with a dot, except when using ranged weapons.</ModDescription>
+        <ModDescription>Replaces the default crosshair with a round (customizable) dot.</ModDescription>
     </PropertyGroup>
 
     <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -38,14 +38,17 @@
         <OutputPath>bin\Main\</OutputPath>
         <AbsoluteOutputPath>$(MSBuildProjectDirectory)\$(OutputPath)</AbsoluteOutputPath>
         <ModName>DotCrosshair</ModName>
-        <ModVersion>1.2.1</ModVersion>
-        <ModDescription>Replaces the default crosshair with a dot, except when using ranged weapons.</ModDescription>
+        <ModVersion>1.3.1</ModVersion>
+        <ModDescription>Replaces the default crosshair with a round (customizable) dot.</ModDescription>
     </PropertyGroup>
     <ItemGroup>
         <Compile Include="Harmony\DotCrosshair.cs"/>
+        <Compile Include="Harmony\DotShape.cs" />
         <Compile Include="Harmony\Init.cs"/>
         <Compile Include="Harmony\Logger.cs"/>
         <Compile Include="Harmony\Patch.cs"/>
+        <Compile Include="Harmony\RoundDot.cs" />
+        <Compile Include="Harmony\SquareDot.cs" />
         <Compile Include="Properties\AssemblyInfo.cs"/>
     </ItemGroup>
 

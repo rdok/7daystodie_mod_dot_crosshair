@@ -19,6 +19,10 @@ namespace DotCrosshair.Harmony
             Logger.Info("OnGlobalSettingsLoaded");
             var generalTab = modSettings.GetTab("General");
 
+            var dotShape = generalTab.GetCategory("Dot").GetSetting("Shape");
+            dotShape.OnSettingChanged += DotShapeChanged;
+            DotSizeChanged(dotShape, (dotShape as IGlobalValueSetting)?.CurrentValue);
+
             var dotSize = generalTab.GetCategory("Dot").GetSetting("Size");
             dotSize.OnSettingChanged += DotSizeChanged;
             DotSizeChanged(dotSize, (dotSize as IGlobalValueSetting)?.CurrentValue);
@@ -54,6 +58,12 @@ namespace DotCrosshair.Harmony
             var shadowOffsetY = generalTab.GetCategory("Shadow").GetSetting("OffsetY");
             shadowOffsetY.OnSettingChanged += ShadowSizeChanged;
             ShadowOffsetYChanged(shadowOffsetY, (shadowOffsetY as IGlobalValueSetting)?.CurrentValue);
+        }
+
+        private static void DotShapeChanged(IGlobalModSetting setting, string value)
+        {
+            Logger.Info($"setting.Name: {setting.Name}. New Value: {value}");
+            DotCrosshair.Shape = DotShape.FromString(value);
         }
 
         public void OnWorldSettingsLoaded(IModWorldSettings worldSettings)

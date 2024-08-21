@@ -10,7 +10,7 @@ namespace DotCrosshair.Harmony
             Color32 white = new Color32(255, 255, 255, 255);
             Color32 clear = new Color32(255, 255, 255, 0);
 
-            float radius = size / 2f;
+            float radius = (size - 1) / 2f; // Adjusted the radius to ensure complete coverage
             Vector2 center = new Vector2(radius, radius);
 
             for (int x = 0; x < size; x++)

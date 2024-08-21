@@ -19,9 +19,10 @@ namespace DotCrosshair.Harmony
         public static float ShadowOffsetX { get; set; } = .5f;
         public static float ShadowOffsetY { get; set; } = 1.5f;
 
-        public static void Draw()
+        public static void Draw(EntityPlayerLocal entityPlayerLocal)
         {
-            var center = new Vector2(Screen.width / 2, Screen.height / 2);
+            var center = entityPlayerLocal.GetCrosshairPosition2D(); 
+            center.y = Screen.height - center.y;
             var alphaChannel = (byte)(AlphaChannel * 255);
             var crosshairColor = new Color32(RedColour, GreenColour, BlueColour, alphaChannel);
 

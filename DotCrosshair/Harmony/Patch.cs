@@ -17,13 +17,11 @@ namespace DotCrosshair.Harmony
                 __instance.emodel.IsRagdollActive ||
                 __instance.AttachedToEntity != null)
             {
-                Debug.Log("[DotCrosshair] Crosshair not drawn due to invalid player state.");
                 return disableGuiDrawCrosshairFunction;
             }
 
             if (bModalWindowOpen || __instance.inventory == null)
             {
-                Debug.Log("[DotCrosshair] Crosshair not drawn due to modal window open or inventory null.");
                 return disableGuiDrawCrosshairFunction;
             }
 
@@ -41,7 +39,6 @@ namespace DotCrosshair.Harmony
                 }
             }
 
-            Debug.Log("[DotCrosshair] Drawing custom crosshair.");
             DotCrosshair.Draw(__instance);
 
             return disableGuiDrawCrosshairFunction;

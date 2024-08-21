@@ -18,7 +18,7 @@
 - [Immersive Crosshair](https://www.nexusmods.com/7daystodie/mods/5601) and [Dot Crosshair](https://www.nexusmods.com/7daystodie/mods/5640) mods are designed to complement each other.
   - Hides crosshair when not having an interactable. 
   - Hides crosshair when using weapons with iron sights.
-- Compatibility: this mod is compatible with other mods that hide the crosshair. For example you can use [1.0-1.1 Danzo No Crosshair](https://www.nexusmods.com/7daystodie/mods/3252) instead of Immersive Crosshair to hide the crosshair.
+- Compatibility: this mod is compatible with other mods that hide the crosshair. For example use [Danzo No Crosshair](https://www.nexusmods.com/7daystodie/mods/3252) instead of Immersive Crosshair in order to have a round dot always visible except when in aiming mode.
 - Game Version: 1.0. Install with [Vortex](https://www.nexusmods.com/about/vortex/).
 
 ### Development
@@ -28,9 +28,12 @@
   - This will translate and replace in place all the Localization.txt records.
 
 ## Changelog
+#### v1.3.2 21-Aug-24
+- fix: Regression issue with Gears not loading properly
+- fix: Remove debugging logs on production
 #### v1.3.1 21-Aug-24
-- fix: Compatability fix with other mods that hide the crosshair.
-  - [1.0-1.1 Danzo No Crosshair](https://www.nexusmods.com/7daystodie/mods/3252) 
+- fix: Compatability fix with other mods that hide the crosshair. Tested:
+  - [Danzo No Crosshair](https://www.nexusmods.com/7daystodie/mods/3252) 
   - [Black Wolf's better ADS accuracy and no crosshair](https://www.nexusmods.com/7daystodie/mods/5832)
 #### v1.3.0 21-Aug-24
 - feat: Add alternative dot shape: round. Configurable through the Gears, the in game mod settings manager.

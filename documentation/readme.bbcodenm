@@ -23,7 +23,7 @@
 [list]
 [*] Hides crosshair when not having an interactable. 
 [*] Hides crosshair when using weapons with iron sights.[/list]
-[*] Compatibility: this mod is compatible with other mods that hide the crosshair. For example you can use [url=https://www.nexusmods.com/7daystodie/mods/3252]1.0-1.1 Danzo No Crosshair[/url] instead of Immersive Crosshair to hide the crosshair.
+[*] Compatibility: this mod is compatible with other mods that hide the crosshair. For example use [url=https://www.nexusmods.com/7daystodie/mods/3252]Danzo No Crosshair[/url] instead of Immersive Crosshair in order to have a round dot always visible except when in aiming mode.
 [*] Game Version: 1.0. Install with [url=https://www.nexusmods.com/about/vortex/]Vortex[/url].
 [/list]
 [size=4]Development[/size]
@@ -35,11 +35,15 @@
 [*] This will translate and replace in place all the Localization.txt records.
 [/list][/list]
 [size=5]Changelog[/size]
+[size=3]v1.3.2 21-Aug-24[/size]
+[list]
+[*] fix: Regression issue with Gears not loading properly
+[*] fix: Remove debugging logs on production[/list]
 [size=3]v1.3.1 21-Aug-24[/size]
 [list]
-[*] fix: Compatability fix with other mods that hide the crosshair.
+[*] fix: Compatability fix with other mods that hide the crosshair. Tested:
 [list]
-[*] [url=https://www.nexusmods.com/7daystodie/mods/3252]1.0-1.1 Danzo No Crosshair[/url] 
+[*] [url=https://www.nexusmods.com/7daystodie/mods/3252]Danzo No Crosshair[/url] 
 [*] [url=https://www.nexusmods.com/7daystodie/mods/5832]Black Wolf's better ADS accuracy and no crosshair[/url][/list][/list]
 [size=3]v1.3.0 21-Aug-24[/size]
 [list]

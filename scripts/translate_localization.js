@@ -56,14 +56,26 @@ async function processCSV(filePath) {
 
         for (const column in languageCodes) {
             console.log(`Starting batch translation for ${column}...`);
-            const englishTexts = rows.map(row => row.english);
+
+            // Collect texts to be translated, filtering out empty or invalid English texts
+            const englishTexts = rows.map(row => row.english && row.english.trim() !== '' ? row.english : null);
+            const textsToTranslate = englishTexts.filter(text => text !== null);
+
+            if (textsToTranslate.length === 0) {
+                console.log(`No valid English texts to translate for ${column}. Skipping...`);
+                continue;
+            }
 
             try {
-                const translatedTexts = await batchTranslate(englishTexts, languageCodes[column]);
+                const translatedTexts = await batchTranslate(textsToTranslate, languageCodes[column]);
 
+                let translationIndex = 0;
                 for (let i = 0; i < rows.length; i++) {
-                    rows[i][column] = translatedTexts[i];
-                    console.log(`Translated row ${i + 1} from English: "${englishTexts[i]}" to ${column}: "${translatedTexts[i]}"`);
+                    if (englishTexts[i] !== null) {
+                        rows[i][column] = translatedTexts[translationIndex];
+                        console.log(`Translated row ${i + 1} from English: "${englishTexts[i]}" to ${column}: "${translatedTexts[translationIndex]}"`);
+                        translationIndex++;
+                    }
                 }
 
                 console.log(`Batch translation for ${column} completed successfully.`);

@@ -43,19 +43,21 @@ namespace DotCrosshair.Harmony
             alphaChannel.OnSettingChanged += DotAlphaChannelChanged;
             DotAlphaChannelChanged(alphaChannel, (alphaChannel as IGlobalValueSetting)?.CurrentValue);
 
-            var shadowEnabled = generalTab.GetCategory("Shadow").GetSetting("Enabled");
+            var squareTab = modSettings.GetTab("Square");
+            
+            var shadowEnabled = squareTab.GetCategory("Shadow").GetSetting("Enabled");
             shadowEnabled.OnSettingChanged += ShadowEnabledChanged;
             ShadowEnabledChanged(shadowEnabled, (shadowEnabled as IGlobalValueSetting)?.CurrentValue);
 
-            var shadowSize = generalTab.GetCategory("Shadow").GetSetting("Size");
+            var shadowSize = squareTab.GetCategory("Shadow").GetSetting("Size");
             shadowSize.OnSettingChanged += ShadowSizeChanged;
             ShadowSizeChanged(shadowSize, (shadowSize as IGlobalValueSetting)?.CurrentValue);
 
-            var shadowOffsetX = generalTab.GetCategory("Shadow").GetSetting("OffsetX");
+            var shadowOffsetX = squareTab.GetCategory("Shadow").GetSetting("OffsetX");
             shadowOffsetX.OnSettingChanged += ShadowSizeChanged;
             ShadowOffsetXChanged(shadowOffsetX, (shadowOffsetX as IGlobalValueSetting)?.CurrentValue);
 
-            var shadowOffsetY = generalTab.GetCategory("Shadow").GetSetting("OffsetY");
+            var shadowOffsetY = squareTab.GetCategory("Shadow").GetSetting("OffsetY");
             shadowOffsetY.OnSettingChanged += ShadowSizeChanged;
             ShadowOffsetYChanged(shadowOffsetY, (shadowOffsetY as IGlobalValueSetting)?.CurrentValue);
         }

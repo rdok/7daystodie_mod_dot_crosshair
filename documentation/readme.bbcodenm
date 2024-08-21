@@ -10,15 +10,20 @@
 
 [size=5]Features[/size]
 [list]
-[*] Universally replaces the default crosshair with a dot.
-[*] [url=https://www.nexusmods.com/7daystodie/mods/5601]Immersive Crosshair[/url] and [url=https://www.nexusmods.com/7daystodie/mods/5640]Dot Crosshair[/url] mods are designed to complement each other.
+[*] Universally replaces the default crosshair with a round dot.
 [list]
-[*] Hides crosshair when not having an interactable. E.g. using weapons with iron sights.[/list]
-[*] Now, features in-game, optional, configuration options. Requires [url=https://www.nexusmods.com/7daystodie/mods/4017]Gears[/url] & [url=https://www.nexusmods.com/7daystodie/mods/2409/]Quartz[/url]
+[*] This can be optionally changed to a square dot.[/list]
+[*] Use [url=https://www.nexusmods.com/7daystodie/mods/4017]Gears[/url] & [url=https://www.nexusmods.com/7daystodie/mods/2409/]Quartz[/url] to change shape, size, color, and shadow (square only) in game.
 [list]
 [*] For an example of how to customize the crosshair with Fallout 4's signature green color, visit the [url=https://www.nexusmods.com/7daystodie/mods/5640?tab=videos#lg=2&slide=0]Videos tab[/url].
+[*] For an example of how to change the crosshair shape to a round dot (think of RDR2 dot), visit the [url=https://www.nexusmods.com/7daystodie/mods/5640?tab=videos#lg=2&slide=0]Videos tab[/url].
 [*] Use [url=https://www.color-hex.com/]https://www.color-hex.com/[/url] to generate your RGBA color.
-[*] The mod will still work with the default values if you are not using Gears.[/list]
+[*] The mod fallbacks to default game values if you are not using Gears: Round white dot with 75% transparency.[/list]
+[*] [url=https://www.nexusmods.com/7daystodie/mods/5601]Immersive Crosshair[/url] and [url=https://www.nexusmods.com/7daystodie/mods/5640]Dot Crosshair[/url] mods are designed to complement each other.
+[list]
+[*] Hides crosshair when not having an interactable. 
+[*] Hides crosshair when using weapons with iron sights.[/list]
+[*] Compatibility: this mod is compatible with other mods that hide the crosshair. For example you can use [url=https://www.nexusmods.com/7daystodie/mods/3252]1.0-1.1 Danzo No Crosshair[/url] instead of Immersive Crosshair to hide the crosshair.
 [*] Game Version: 1.0. Install with [url=https://www.nexusmods.com/about/vortex/]Vortex[/url].
 [/list]
 [size=4]Development[/size]
@@ -30,6 +35,18 @@
 [*] This will translate and replace in place all the Localization.txt records.
 [/list][/list]
 [size=5]Changelog[/size]
+[size=3]v1.3.1 21-Aug-24[/size]
+[list]
+[*] fix: Compatability fix with other mods that hide the crosshair.
+[list]
+[*] [url=https://www.nexusmods.com/7daystodie/mods/3252]1.0-1.1 Danzo No Crosshair[/url] 
+[*] [url=https://www.nexusmods.com/7daystodie/mods/5832]Black Wolf's better ADS accuracy and no crosshair[/url][/list][/list]
+[size=3]v1.3.0 21-Aug-24[/size]
+[list]
+[*] feat: Add alternative dot shape: round. Configurable through the Gears, the in game mod settings manager.
+[*] feat: Set default crosshair shape to round as it feels much better.
+[*] feat: Moved square only shadow settings to its own tab.
+[*] fix: Add missing translations for the tab title[/list]
 [size=3]v1.2.1 16-Aug-24[/size]
 [list]
 [*] fix: Use default (white) color when not using Gears.[/list]

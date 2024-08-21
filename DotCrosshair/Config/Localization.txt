@@ -1,14 +1,18 @@
 Key,File,Type,UsedInMainMenu,NoTranslate,english,Context / Alternate Text,german,spanish,french,italian,japanese,koreana,polish,brazilian,russian,turkish,schinese,tchinese
-dotCategoryDisplayKey,UI,Menu,x,,Dot Settings,,Punkteinstellungen,Configuración de puntos,Paramètres des points,Impostazioni dei punti,ドット設定,점 설정,Ustawienia kropki,Configurações de pontos,Настройки точек,Nokta Ayarları,点设置,點設定
+generalTabDisplayKey,UI,Menu,x,,General,,Allgemein,General,Général,Generale,一般的な,일반적인,Ogólny,Em geral,Общий,Genel,一般的,一般的
+dotCategoryDisplayKey,UI,Menu,x,,Dot,,Punkt,Punto,Point,Punto,ドット,점,Kropka,Ponto,точка,Nokta,点,點
+dotShapeDisplayKey,UI,Menu,x,,Shape,,Form,Forma,Forme,Forma,形,모양,Kształt,Forma,Форма,Şekil,形状,形狀
 dotSizeDisplayKey,UI,Menu,x,,Size,,Größe,Tamaño,Taille,Misurare,サイズ,크기,Rozmiar,Tamanho,Размер,Boyut,尺寸,尺寸
 dotRedDisplayKey,UI,Menu,x,,Red,,Rot,Rojo,Rouge,Rosso,赤,빨간색,Czerwony,Vermelho,Красный,Kırmızı,红色的,紅色的
 dotRedTooltipKey,UI,Menu,x,,Warmth or intensity of the color.,,Wärme oder Intensität der Farbe.,Calidez o intensidad del color.,Chaleur ou intensité de la couleur.,Calore o intensità del colore.,色の暖かさまたは強さ。,색상의 따뜻함이나 강도.,Ciepło i intensywność koloru.,Calor ou intensidade da cor.,Теплота или интенсивность цвета.,Rengin sıcaklığı veya yoğunluğu.,颜色的温暖或强度。,顏色的溫暖度或強度。
 dotGreenDisplayKey,UI,Menu,x,,Green,,Grün,Verde,Vert,Verde,緑,녹색,Zielony,Verde,Зеленый,Yeşil,绿色的,綠色的
 dotGreenTooltipKey,UI,Menu,x,,Natural and calming tones.,,Natürliche und beruhigende Töne.,Tonos naturales y calmantes.,Des tons naturels et apaisants.,Toni naturali e rilassanti.,ナチュラルで落ち着いた色合い。,자연스럽고 차분한 톤.,Naturalne i uspokajające tony.,Tons naturais e calmantes.,Естественные и успокаивающие тона.,Doğal ve sakinleştirici tonlar.,自然、平静的色调。,自然而平靜的色調。
 dotBlueDisplayKey,UI,Menu,x,,Blue,,Blau,Azul,Bleu,Blu,青,파란색,Niebieski,Azul,Синий,Mavi,蓝色的,藍色的
-dotBlueTooltipKey,UI,Menu,x,,Coolness and depth.,,Kühle und Tiefe.,Frescura y profundidad.,Fraîcheur et profondeur.,Freschezza e profondità.,クールさと深み。,차가움과 깊이.,Chłód i głębia.,Frieza e profundidade.,Прохлада и глубина.,Serinlik ve derinlik.,清凉而深邃。,涼爽和深度。
+dotBlueTooltipKey,UI,Menu,x,,Coolness and depth.,,Kühle und Tiefe.,Frescura y profundidad.,Fraîcheur et profondeur.,Freschezza e profondità.,クールさと深み。,시원함과 깊이.,Chłód i głębia.,Frieza e profundidade.,Прохлада и глубина.,Serinlik ve derinlik.,清凉而深邃。,涼爽和深度。
 dotAlphaDisplayKey,UI,Menu,x,,Alpha,,Alpha,Alfa,Alpha,Alfa,アルファ,알파,Alfa,Alfa,Альфа,Alfa,阿尔法,阿爾法
 dotAlphaTooltipKey,UI,Menu,x,,Transparency from fully see-through to fully solid.,,Transparenz von völlig durchsichtig bis völlig durchscheinend.,Transparencia desde completamente transparente hasta completamente sólido.,Transparence allant de totalement transparent à totalement solide.,Trasparenza da completamente trasparente a completamente opaco.,完全に透明な状態から完全に無地の状態までの透明性。,완전히 투명한 것부터 완전히 단단한 것까지 투명도.,Przezroczystość od całkowicie przejrzystej do całkowicie kryjącej.,"Transparência, desde totalmente transparente até totalmente sólida.",Прозрачность от полностью прозрачной до полностью сплошной.,Tamamen şeffaftan tamamen katıya kadar şeffaflık.,透明度从完全透明到完全固体。,透明度從完全透明到完全固體。
+squareTabDisplayKey,UI,Menu,x,,Square,,Quadrat,Cuadrado,Carré,Piazza,四角,정사각형,Kwadrat,Quadrado,Квадрат,Kare,正方形,方塊
+squareTabTooltipKey,UI,Menu,x,,Square only settings,,Nur quadratische Einstellungen,Configuración solo cuadrada,Paramètres carrés uniquement,Impostazioni solo quadrate,正方形のみの設定,정사각형만 설정,Ustawienia tylko kwadratowe,Configurações somente quadradas,Настройки только для квадрата,Sadece kare ayarları,仅限正方形设置,僅方形設置
 shadowCategoryDisplayKey,UI,Menu,x,,Shadow,,Schatten,Sombra,Ombre,Ombra,影,그림자,Cień,Sombra,Тень,Gölge,阴影,陰影
 shadowEnabledDisplayKey,UI,Menu,x,,Enabled,,Ermöglicht,Activado,Activé,Abilitato,有効,활성화됨,Włączony,Habilitado,Включено,Etkinleştirilmiş,已启用,啟用
 shadowSizeDisplayKey,UI,Menu,x,,Size,,Größe,Tamaño,Taille,Misurare,サイズ,크기,Rozmiar,Tamanho,Размер,Boyut,尺寸,尺寸

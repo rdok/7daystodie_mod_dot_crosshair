@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModSettings>
     <Global>
-        <Tab name="General">
+        <Tab name="General" displayKey="generalTabDisplayKey">
             <Category name="Dot" displayKey="dotCategoryDisplayKey">
+                <Selector name="Shape" displayKey="dotShapeDisplayKey" defaultValue="round">
+                    <Property type="arrayValues" allowedValues="round,square"/>
+                </Selector>
                 <Slider name="Size" displayKey="dotSizeDisplayKey" defaultValue="5">
                     <Property type="incrementalValuesInt" increment="1" minValue="0" maxValue="10"/>
                 </Slider>
@@ -15,11 +18,14 @@
                 <Slider name="Blue" displayKey="dotBlueDisplayKey" tooltipKey="dotBlueTooltipKey" defaultValue="255">
                     <Property type="incrementalValuesInt" increment="1" minValue="0" maxValue="255"/>
                 </Slider>
-                <Slider name="Alpha" displayKey="dotAlphaDisplayKey" tooltipKey="dotAlphaTooltipKey" defaultValue="0.75">
+                <Slider name="Alpha" displayKey="dotAlphaDisplayKey" tooltipKey="dotAlphaTooltipKey"
+                        defaultValue="0.75">
                     <Property type="incrementalValuesFloat" increment="0.10" minValue="0" maxValue="1"/>
                 </Slider>
             </Category>
-            <Category name="Shadow" displayKey="shadowCategoryDisplayKey" tooltipKey="shadowCategoryTooltipKey">
+        </Tab>
+        <Tab name="Square" displayKey="squareTabDisplayKey" tooltipKey="squareTabTooltipKey">
+            <Category name="Shadow" displayKey="shadowCategoryDisplayKey">
                 <Switch
                         name="Enabled"
                         displayKey="shadowEnabledDisplayKey"

@@ -3,11 +3,9 @@ using UnityEngine;
 
 namespace DotCrosshair.Harmony
 {
-    [HarmonyPatch(typeof(EntityPlayerLocal), "guiDrawCrosshair")]
+    [HarmonyPatch(typeof(EntityPlayerLocal), nameof(EntityPlayerLocal.guiDrawCrosshair))]
     public static class Patch
     {
-        private static readonly ILogger Logger = new Logger();
-
         public static bool Prefix(EntityPlayerLocal __instance, NGuiWdwInGameHUD _guiInGame, bool bModalWindowOpen)
         {
             const bool disableGuiDrawCrosshairFunction = false;
@@ -19,7 +17,7 @@ namespace DotCrosshair.Harmony
 
             if (bModalWindowOpen || __instance.inventory == null) return disableGuiDrawCrosshairFunction;
 
-            if (_guiInGame.showCrosshair) DotCrosshair.Draw(__instance);
+            if (_guiInGame.showCrosshair) DotCrosshair.Draw();
 
             return disableGuiDrawCrosshairFunction;
         }

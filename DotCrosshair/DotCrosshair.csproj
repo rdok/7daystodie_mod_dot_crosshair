@@ -38,7 +38,7 @@
         <OutputPath>bin\Main\</OutputPath>
         <AbsoluteOutputPath>$(MSBuildProjectDirectory)\$(OutputPath)</AbsoluteOutputPath>
         <ModName>DotCrosshair</ModName>
-        <ModVersion>1.3.2</ModVersion>
+        <ModVersion>1.3.3</ModVersion>
         <ModDescription>Replaces the default crosshair with a round (customizable) dot.</ModDescription>
     </PropertyGroup>
     <ItemGroup>

@@ -6,7 +6,7 @@
                 <Selector name="Shape" displayKey="dotShapeDisplayKey" defaultValue="round">
                     <Property type="arrayValues" allowedValues="round,square"/>
                 </Selector>
-                <Slider name="Size" displayKey="dotSizeDisplayKey" defaultValue="5">
+                <Slider name="Size" displayKey="dotSizeDisplayKey" defaultValue="8">
                     <Property type="incrementalValuesInt" increment="1" minValue="0" maxValue="10"/>
                 </Slider>
                 <Slider name="Red" displayKey="dotRedDisplayKey" tooltipKey="dotRedTooltipKey" defaultValue="255">

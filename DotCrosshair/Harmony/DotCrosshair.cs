@@ -8,7 +8,7 @@ namespace DotCrosshair.Harmony
 
         public static DotShape Shape { get; set; } = DotShape.Round;
 
-        public static float DotSize { get; set; } = 5f;
+        public static float DotSize { get; set; } = 8f;
         public static byte RedColour { get; set; } = 255;
         public static byte GreenColour { get; set; } = 255;
         public static byte BlueColour { get; set; } = 255;

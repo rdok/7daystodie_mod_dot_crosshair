@@ -28,6 +28,8 @@
   - This will translate and replace in place all the Localization.txt records.
 
 ## Changelog
+#### v1.4.0 31-Aug-24
+- feat: Gear option `Ranged Weapons` use the vanilla crosshair when holding ranged weapons.
 #### v1.3.3 24-Aug-24
 - fix: Change the default dot size from 5 to 8 as the round dot is less visible than previously default square dot.
 #### v1.3.2 21-Aug-24

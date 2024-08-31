@@ -38,8 +38,9 @@
         <OutputPath>bin\Main\</OutputPath>
         <AbsoluteOutputPath>$(MSBuildProjectDirectory)\$(OutputPath)</AbsoluteOutputPath>
         <ModName>DotCrosshair</ModName>
-        <ModVersion>1.3.3</ModVersion>
+        <ModVersion>1.4.0</ModVersion>
         <ModDescription>Replaces the default crosshair with a round (customizable) dot.</ModDescription>
+        <ModId>5640</ModId>
     </PropertyGroup>
     <ItemGroup>
         <Compile Include="Harmony\DotCrosshair.cs"/>
@@ -49,6 +50,7 @@
         <Compile Include="Harmony\Patch.cs"/>
         <Compile Include="Harmony\RoundDot.cs" />
         <Compile Include="Harmony\SquareDot.cs" />
+        <Compile Include="Harmony\Tags.cs" />
         <Compile Include="Properties\AssemblyInfo.cs"/>
     </ItemGroup>
 
@@ -104,7 +106,8 @@
         <XmlPoke XmlInputPath="$(OutputPath)\ModInfo.xml" Query="/xml/Author/@value" Value="Rizarttt"/>
         <XmlPoke XmlInputPath="$(OutputPath)\ModInfo.xml" Query="/xml/Description/@value" Value="$(ModDescription)"/>
         <XmlPoke XmlInputPath="$(OutputPath)\ModInfo.xml" Query="/xml/Version/@value" Value="$(ModVersion)"/>
-        <XmlPoke XmlInputPath="$(OutputPath)\ModInfo.xml" Query="/xml/Website/@value" Value="https://www.nexusmods.com/7daystodie/mods/5640"/>
+        <XmlPoke XmlInputPath="$(OutputPath)\ModInfo.xml" Query="/xml/Website/@value"
+                 Value="https://www.nexusmods.com/7daystodie/mods/$(ModId)"/>
 
         <Exec
                 Condition=" '$(Configuration)' != 'Debug' "

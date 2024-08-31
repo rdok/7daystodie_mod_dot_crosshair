@@ -11,12 +11,11 @@
 [size=5]Features[/size]
 [list]
 [*] Universally replaces the default crosshair with a round dot.
+[*] Use [url=https://www.nexusmods.com/7daystodie/mods/4017]Gears[/url] & [url=https://www.nexusmods.com/7daystodie/mods/2409/]Quartz[/url] to:
 [list]
-[*] This can be optionally changed to a square dot.[/list]
-[*] Use [url=https://www.nexusmods.com/7daystodie/mods/4017]Gears[/url] & [url=https://www.nexusmods.com/7daystodie/mods/2409/]Quartz[/url] to change shape, size, color, and shadow (square only) in game.
-[list]
-[*] For an example of how to customize the crosshair with Fallout 4's signature green color, visit the [url=https://www.nexusmods.com/7daystodie/mods/5640?tab=videos#lg=2&slide=0]Videos tab[/url].
-[*] For an example of how to change the crosshair shape to a round dot (think of RDR2 dot), visit the [url=https://www.nexusmods.com/7daystodie/mods/5640?tab=videos#lg=2&slide=0]Videos tab[/url].
+[*] [url=https://www.nexusmods.com/7daystodie/mods/5640?tab=videos#lg=2&slide=2]Customize the crosshair with Fallout 4's signature green color[/url].
+[*] [url=https://www.nexusmods.com/7daystodie/mods/5640?tab=videos#lg=2&slide=1]Change the crosshair shape to a round or square dot[/url].
+[*] [url=https://www.nexusmods.com/7daystodie/mods/5640?tab=videos#lg=2&slide=0]Use the vanilla crosshair when holding ranged weapons[/url].
 [*] Use [url=https://www.color-hex.com/]https://www.color-hex.com/[/url] to generate your RGBA color.
 [*] The mod fallbacks to default game values if you are not using Gears: Round white dot with 75% transparency.[/list]
 [*] [url=https://www.nexusmods.com/7daystodie/mods/5601]Immersive Crosshair[/url] and [url=https://www.nexusmods.com/7daystodie/mods/5640]Dot Crosshair[/url] mods are designed to complement each other.
@@ -37,7 +36,9 @@
 [size=5]Changelog[/size]
 [size=3]v1.4.0 31-Aug-24[/size]
 [list]
-[*] feat: Gear option [b]Ranged Weapons[/b] use the vanilla crosshair when holding ranged weapons.[/list]
+[*] feat: Gear option [b]Ranged Weapons[/b]; disable this to use the vanilla crosshair when holding ranged weapons.
+[list]
+[*] [url=https://www.nexusmods.com/7daystodie/mods/5640?tab=posts&jump_to_comment=143481219&BH=0]As per discussion.[/url][/list][/list]
 [size=3]v1.3.3 24-Aug-24[/size]
 [list]
 [*] fix: Change the default dot size from 5 to 8 as the round dot is less visible than previously default square dot.[/list]

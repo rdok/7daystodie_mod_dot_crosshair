@@ -10,10 +10,10 @@
 
 ## Features
 - Universally replaces the default crosshair with a round dot.
-  - This can be optionally changed to a square dot.
-- Use [Gears](https://www.nexusmods.com/7daystodie/mods/4017) & [Quartz](https://www.nexusmods.com/7daystodie/mods/2409/) to change shape, size, color, and shadow (square only) in game.
-  - For an example of how to customize the crosshair with Fallout 4’s signature green color, visit the [Videos tab](https://www.nexusmods.com/7daystodie/mods/5640?tab=videos#lg=2&slide=0).
-  - For an example of how to change the crosshair shape to a round dot (think of RDR2 dot), visit the [Videos tab](https://www.nexusmods.com/7daystodie/mods/5640?tab=videos#lg=2&slide=0).
+- Use [Gears](https://www.nexusmods.com/7daystodie/mods/4017) & [Quartz](https://www.nexusmods.com/7daystodie/mods/2409/) to:
+  - [Customize the crosshair with Fallout 4’s signature green color](https://www.nexusmods.com/7daystodie/mods/5640?tab=videos#lg=2&slide=2).
+  - [Change the crosshair shape to a round or square dot](https://www.nexusmods.com/7daystodie/mods/5640?tab=videos#lg=2&slide=1).
+  - [Use the vanilla crosshair when holding ranged weapons](https://www.nexusmods.com/7daystodie/mods/5640?tab=videos#lg=2&slide=0).
   - Use [https://www.color-hex.com/](https://www.color-hex.com/) to generate your RGBA color.
   - The mod fallbacks to default game values if you are not using Gears: Round white dot with 75% transparency.
 - [Immersive Crosshair](https://www.nexusmods.com/7daystodie/mods/5601) and [Dot Crosshair](https://www.nexusmods.com/7daystodie/mods/5640) mods are designed to complement each other.
@@ -30,7 +30,8 @@
 
 ## Changelog
 #### v1.4.0 31-Aug-24
-- feat: Gear option `Ranged Weapons` use the vanilla crosshair when holding ranged weapons.
+- feat: Gear option `Ranged Weapons`; disable this to use the vanilla crosshair when holding ranged weapons.
+  - [As per discussion.](https://www.nexusmods.com/7daystodie/mods/5640?tab=posts&jump_to_comment=143481219&BH=0)
 #### v1.3.3 24-Aug-24
 - fix: Change the default dot size from 5 to 8 as the round dot is less visible than previously default square dot.
 #### v1.3.2 21-Aug-24

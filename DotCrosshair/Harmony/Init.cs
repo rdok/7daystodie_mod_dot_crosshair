@@ -18,33 +18,40 @@ namespace DotCrosshair.Harmony
         {
             Logger.Info("OnGlobalSettingsLoaded");
             var generalTab = modSettings.GetTab("General");
+            var dotCategory = generalTab.GetCategory("Dot");
 
-            var dotShape = generalTab.GetCategory("Dot").GetSetting("Shape");
+            var dotShape = dotCategory.GetSetting("Shape");
             dotShape.OnSettingChanged += DotShapeChanged;
             DotSizeChanged(dotShape, (dotShape as IGlobalValueSetting)?.CurrentValue);
 
-            var dotSize = generalTab.GetCategory("Dot").GetSetting("Size");
+            var dotSize = dotCategory.GetSetting("Size");
             dotSize.OnSettingChanged += DotSizeChanged;
             DotSizeChanged(dotSize, (dotSize as IGlobalValueSetting)?.CurrentValue);
 
-            var redColor = generalTab.GetCategory("Dot").GetSetting("Red");
+            var enabledForRangedWeapons = dotCategory.GetSetting("EnabledForRangedWeapons");
+            enabledForRangedWeapons.OnSettingChanged += EnabledForRangedWeaponsChanged;
+            EnabledForRangedWeaponsChanged(
+                enabledForRangedWeapons, (enabledForRangedWeapons as IGlobalValueSetting)?.CurrentValue
+            );
+
+            var redColor = dotCategory.GetSetting("Red");
             redColor.OnSettingChanged += DotRedColorChanged;
             DotRedColorChanged(redColor, (redColor as IGlobalValueSetting)?.CurrentValue);
 
-            var greenColor = generalTab.GetCategory("Dot").GetSetting("Green");
+            var greenColor = dotCategory.GetSetting("Green");
             greenColor.OnSettingChanged += DotGreenColorChanged;
             DotGreenColorChanged(greenColor, (greenColor as IGlobalValueSetting)?.CurrentValue);
 
-            var blueColor = generalTab.GetCategory("Dot").GetSetting("Blue");
+            var blueColor = dotCategory.GetSetting("Blue");
             blueColor.OnSettingChanged += DotBlueColorChanged;
             DotBlueColorChanged(blueColor, (blueColor as IGlobalValueSetting)?.CurrentValue);
 
-            var alphaChannel = generalTab.GetCategory("Dot").GetSetting("Alpha");
+            var alphaChannel = dotCategory.GetSetting("Alpha");
             alphaChannel.OnSettingChanged += DotAlphaChannelChanged;
             DotAlphaChannelChanged(alphaChannel, (alphaChannel as IGlobalValueSetting)?.CurrentValue);
 
             var squareTab = modSettings.GetTab("Square");
-            
+
             var shadowEnabled = squareTab.GetCategory("Shadow").GetSetting("Enabled");
             shadowEnabled.OnSettingChanged += ShadowEnabledChanged;
             ShadowEnabledChanged(shadowEnabled, (shadowEnabled as IGlobalValueSetting)?.CurrentValue);
@@ -126,6 +133,13 @@ namespace DotCrosshair.Harmony
             Logger.Info($"setting.Name: {setting.Name}. New Value: {value}");
             bool.TryParse(value, out var shadowEnabled);
             DotCrosshair.ShadowEnabled = shadowEnabled;
+        }
+
+        private static void EnabledForRangedWeaponsChanged(IGlobalModSetting setting, string value)
+        {
+            Logger.Info($"setting.Name: {setting.Name}. New Value: {value}");
+            bool.TryParse(value, out var enabledForRangedWeaponsChanged);
+            Patch.EnabledForRangedWeaponsSetting = enabledForRangedWeaponsChanged;
         }
 
         private static void ShadowOffsetXChanged(IGlobalModSetting setting, string value)

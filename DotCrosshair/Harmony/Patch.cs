@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using HarmonyLib;
 using UnityEngine;
 
@@ -7,8 +8,15 @@ namespace DotCrosshair.Harmony
     [HarmonyPatch(typeof(EntityPlayerLocal), nameof(EntityPlayerLocal.guiDrawCrosshair))]
     public static class Patch
     {
+        public static bool EnabledForRangedWeaponsSetting { get; set; } = true;
+
         public static bool Prefix(EntityPlayerLocal __instance, NGuiWdwInGameHUD _guiInGame, bool bModalWindowOpen)
         {
+            if (!EnabledForRangedWeaponsSetting && HoldingRangedWeapon(__instance))
+            {
+                return true;
+            }
+
             const bool disableGuiDrawCrosshairFunction = false;
 
             if (!_guiInGame.showCrosshair ||
@@ -42,6 +50,19 @@ namespace DotCrosshair.Harmony
             DotCrosshair.Draw(__instance);
 
             return disableGuiDrawCrosshairFunction;
+        }
+
+        private static bool HoldingRangedWeapon(EntityPlayerLocal entityPlayerLocal)
+        {
+            if (entityPlayerLocal == null) return false;
+
+            var holdingItem = entityPlayerLocal.inventory.holdingItemItemValue;
+
+            var actions = holdingItem?.ItemClass?.Actions;
+
+            return actions?.Any(action => Tags.HasTags(
+                action, new[] { "weapon", "ranged" }, Tags.TagCheckType.All
+            )) ?? false;
         }
     }
 }

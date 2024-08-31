@@ -9,6 +9,14 @@
                 <Slider name="Size" displayKey="dotSizeDisplayKey" defaultValue="8">
                     <Property type="incrementalValuesInt" increment="1" minValue="0" maxValue="10"/>
                 </Slider>
+                <Switch
+                        name="EnabledForRangedWeapons"
+                        displayKey="enabledForRangedWeaponsDisplayKey"
+                        tooltipKey="enabledForRangedWeaponsTooltipKey"
+                        defaultValue="true"
+                        leftValue="false"
+                        rightValue="true"
+                />
                 <Slider name="Red" displayKey="dotRedDisplayKey" tooltipKey="dotRedTooltipKey" defaultValue="255">
                     <Property type="incrementalValuesInt" increment="1" minValue="0" maxValue="255"/>
                 </Slider>

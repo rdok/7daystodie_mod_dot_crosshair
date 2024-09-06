@@ -8,7 +8,9 @@ namespace DotCrosshair.Harmony
     [HarmonyPatch(typeof(EntityPlayerLocal), nameof(EntityPlayerLocal.guiDrawCrosshair))]
     public static class Patch
     {
-        public static bool EnabledForRangedWeaponsSetting { get; set; } = true;
+        public static bool EnabledForRangedWeaponsSetting { get; set; } =
+            ModSettings.GetBool("General", "Dot", "EnabledForRangedWeapons");
+
 
         public static bool Prefix(EntityPlayerLocal __instance, NGuiWdwInGameHUD _guiInGame, bool bModalWindowOpen)
         {

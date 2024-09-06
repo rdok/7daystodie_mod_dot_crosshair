@@ -38,24 +38,25 @@
         <OutputPath>bin\Main\</OutputPath>
         <AbsoluteOutputPath>$(MSBuildProjectDirectory)\$(OutputPath)</AbsoluteOutputPath>
         <ModName>DotCrosshair</ModName>
-        <ModVersion>1.4.0</ModVersion>
+        <ModVersion>1.5.0</ModVersion>
         <ModDescription>Replaces the default crosshair with a round (customizable) dot.</ModDescription>
         <ModId>5640</ModId>
     </PropertyGroup>
     <ItemGroup>
         <Compile Include="Harmony\DotCrosshair.cs"/>
-        <Compile Include="Harmony\DotShape.cs" />
+        <Compile Include="Harmony\DotShape.cs"/>
         <Compile Include="Harmony\Init.cs"/>
         <Compile Include="Harmony\Logger.cs"/>
+        <Compile Include="Harmony\ModSettings.cs" />
         <Compile Include="Harmony\Patch.cs"/>
-        <Compile Include="Harmony\RoundDot.cs" />
-        <Compile Include="Harmony\SquareDot.cs" />
-        <Compile Include="Harmony\Tags.cs" />
+        <Compile Include="Harmony\RoundDot.cs"/>
+        <Compile Include="Harmony\SquareDot.cs"/>
+        <Compile Include="Harmony\Tags.cs"/>
         <Compile Include="Properties\AssemblyInfo.cs"/>
     </ItemGroup>
 
     <ItemGroup>
-        <Content Include="Config\**\*"> 
+        <Content Include="Config\**\*">
             <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         </Content>
         <Content Include="ModInfo.xml">
@@ -80,6 +81,14 @@
         </Reference>
         <Reference Include="LogLibrary">
             <HintPath>..\..\..\..\Steam\steamapps\common\7 Days To Die\7DaysToDie_Data\Managed\LogLibrary.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="System.Xml.Linq">
+            <HintPath>..\..\..\..\Steam\steamapps\common\7 Days To Die\7DaysToDie_Data\Managed\System.Xml.Linq.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="System.Xml">
+            <HintPath>..\..\..\..\Steam\steamapps\common\7 Days To Die\7DaysToDie_Data\Managed\System.Xml.dll</HintPath>
             <Private>False</Private>
         </Reference>
         <Reference Include="UnityEngine">

@@ -10,18 +10,21 @@
 
 [size=5]Features[/size]
 [list]
-[*] Universally replaces the default crosshair with a round dot.
-[*] Use [url=https://www.nexusmods.com/7daystodie/mods/4017]Gears[/url] & [url=https://www.nexusmods.com/7daystodie/mods/2409/]Quartz[/url] to:
+[*] Replaces the default crosshair with a customizable round dot.
+[*] [b]With [url=https://www.nexusmods.com/7daystodie/mods/4017]Gears[/url] & [url=https://www.nexusmods.com/7daystodie/mods/2409/]Quartz[/url][/b]:
 [list]
-[*] [url=https://www.nexusmods.com/7daystodie/mods/5640?tab=videos#lg=2&slide=2]Customize the crosshair with Fallout 4's signature green color[/url].
-[*] [url=https://www.nexusmods.com/7daystodie/mods/5640?tab=videos#lg=2&slide=1]Change the crosshair shape to a round or square dot[/url].
-[*] [url=https://www.nexusmods.com/7daystodie/mods/5640?tab=videos#lg=2&slide=0]Use the vanilla crosshair when holding ranged weapons[/url].
-[*] Use [url=https://www.color-hex.com/]https://www.color-hex.com/[/url] to generate your RGBA color.
-[*] The mod fallbacks to default game values if you are not using Gears: Round white dot with 75% transparency.[/list]
-[*] [url=https://www.nexusmods.com/7daystodie/mods/5601]Immersive Crosshair[/url] and [url=https://www.nexusmods.com/7daystodie/mods/5640]Dot Crosshair[/url] mods are designed to complement each other.
+[*] [b]Customize Color, Shape, and Size[/b]: Adjust color, shape (round or square), and size. Customize shadow for square shapes.
+[*] [b]Vanilla Crosshair[/b]: Option to use the vanilla crosshair for ranged weapons.
+[*] [b]Fallback[/b]: Defaults to a round white dot with 75% transparency if Gears & Quartz are not used.
+[/list]
+[*] [b]Manual Configuration via [b]ModSettings.xml[/b][/b]:
 [list]
-[*] Hides crosshair when not having an interactable. 
-[*] Hides crosshair when using weapons with iron sights.[/list]
-[*] Compatibility: this mod is compatible with other mods that hide the crosshair. For example use [url=https://www.nexusmods.com/7daystodie/mods/3252]Danzo No Crosshair[/url] instead of Immersive Crosshair in order to have a round dot always visible except when in aiming mode.
-[*] Game Version: 1.0. Install with [url=https://www.nexusmods.com/about/vortex/]Vortex[/url].
+[*] Edit [b]ModSettings.xml[/b] if Gears & Quartz cannot be used.
+[/list]
+[*] [b]Visibility and Integration[/b]:
+[list]
+[*] Hides the crosshair with [url=https://www.nexusmods.com/7daystodie/mods/5601]Immersive Crosshair[/url] when not interacting or using iron sights.
+[*] [url=https://www.nexusmods.com/7daystodie/mods/3252]Danzo No Crosshair[/url] can be used as an alternative to Immersive Crosshair mod.
+[/list]
+[*] [b]Game Version[/b]: 1.0. Install with [url=https://www.nexusmods.com/about/vortex/]Vortex[/url].
 [/list]

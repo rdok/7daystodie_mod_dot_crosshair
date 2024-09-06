@@ -4,9 +4,9 @@ namespace DotCrosshair.Harmony
 {
     public class DotShape
     {
-        public static readonly DotShape Round = new DotShape("Round");
-        public static readonly DotShape Square = new DotShape("Square");
-        public string Name { get; private set; }
+        private static readonly DotShape Round = new DotShape("Round");
+        private static readonly DotShape Square = new DotShape("Square");
+        private string Name { get; }
 
         private DotShape(string name)
         {

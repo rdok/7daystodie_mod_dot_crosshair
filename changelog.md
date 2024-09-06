@@ -1,5 +1,9 @@
 ## Changelog
 
+#### 1.5.0 06-Sep-24
+
+- feat: Dot can be customized using `ModSettings.xml` for users that cannot install [Gears](https://www.nexusmods.com/7daystodie/mods/4017) & [Quartz](https://www.nexusmods.com/7daystodie/mods/2409/). [As per discussion.](https://www.nexusmods.com/7daystodie/mods/5640?tab=posts&jump_to_comment=143710005&BH=0)
+    
 #### 1.4.0 31-Aug-24
 
 - feat: Gear option `Ranged Weapons`; disable this to use the vanilla crosshair when holding ranged weapons.

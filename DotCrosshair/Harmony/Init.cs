@@ -16,7 +16,7 @@ namespace DotCrosshair.Harmony
 
         public void OnGlobalSettingsLoaded(IModGlobalSettings modSettings)
         {
-            Logger.Info("OnGlobalSettingsLoaded");
+            Logger.Debug("OnGlobalSettingsLoaded");
             var generalTab = modSettings.GetTab("General");
             var dotCategory = generalTab.GetCategory("Dot");
 
@@ -71,7 +71,7 @@ namespace DotCrosshair.Harmony
 
         private static void DotShapeChanged(IGlobalModSetting setting, string value)
         {
-            Logger.Info($"setting.Name: {setting.Name}. New Value: {value}");
+            Logger.Debug($"setting.Name: {setting.Name}. New Value: {value}");
             DotCrosshair.Shape = DotShape.FromString(value);
         }
 
@@ -87,28 +87,28 @@ namespace DotCrosshair.Harmony
 
         private static void DotRedColorChanged(IGlobalModSetting setting, string value)
         {
-            Logger.Info($"setting.Name: {setting.Name}. New Value: {value}");
+            Logger.Debug($"setting.Name: {setting.Name}. New Value: {value}");
             byte.TryParse(value, out var colour);
             DotCrosshair.RedColour = colour;
         }
 
         private static void DotGreenColorChanged(IGlobalModSetting setting, string value)
         {
-            Logger.Info($"setting.Name: {setting.Name}. New Value: {value}");
+            Logger.Debug($"setting.Name: {setting.Name}. New Value: {value}");
             byte.TryParse(value, out var colour);
             DotCrosshair.GreenColour = colour;
         }
 
         private static void DotBlueColorChanged(IGlobalModSetting setting, string value)
         {
-            Logger.Info($"setting.Name: {setting.Name}. New Value: {value}");
+            Logger.Debug($"setting.Name: {setting.Name}. New Value: {value}");
             byte.TryParse(value, out var colour);
             DotCrosshair.BlueColour = colour;
         }
 
         private static void DotAlphaChannelChanged(IGlobalModSetting setting, string value)
         {
-            Logger.Info($"setting.Name: {setting.Name}. New Value: {value}");
+            Logger.Debug($"setting.Name: {setting.Name}. New Value: {value}");
             float.TryParse(value, out var alphaChannel);
             DotCrosshair.AlphaChannel = alphaChannel;
         }
@@ -116,42 +116,42 @@ namespace DotCrosshair.Harmony
 
         private static void ShadowSizeChanged(IGlobalModSetting setting, string value)
         {
-            Logger.Info($"setting.Name: {setting.Name}. New Value: {value}");
+            Logger.Debug($"setting.Name: {setting.Name}. New Value: {value}");
             float.TryParse(value, out var shadowSize);
             DotCrosshair.ShadowSize = shadowSize;
         }
 
         private static void DotSizeChanged(IGlobalModSetting setting, string value)
         {
-            Logger.Info($"setting.Name: {setting.Name}. New Value: {value}");
+            Logger.Debug($"setting.Name: {setting.Name}. New Value: {value}");
             float.TryParse(value, out var dotSize);
             DotCrosshair.DotSize = dotSize;
         }
 
         private static void ShadowEnabledChanged(IGlobalModSetting setting, string value)
         {
-            Logger.Info($"setting.Name: {setting.Name}. New Value: {value}");
+            Logger.Debug($"setting.Name: {setting.Name}. New Value: {value}");
             bool.TryParse(value, out var shadowEnabled);
             DotCrosshair.ShadowEnabled = shadowEnabled;
         }
 
         private static void EnabledForRangedWeaponsChanged(IGlobalModSetting setting, string value)
         {
-            Logger.Info($"setting.Name: {setting.Name}. New Value: {value}");
+            Logger.Debug($"setting.Name: {setting.Name}. New Value: {value}");
             bool.TryParse(value, out var enabledForRangedWeaponsChanged);
             Patch.EnabledForRangedWeaponsSetting = enabledForRangedWeaponsChanged;
         }
 
         private static void ShadowOffsetXChanged(IGlobalModSetting setting, string value)
         {
-            Logger.Info($"setting.Name: {setting.Name}. New Value: {value}");
+            Logger.Debug($"setting.Name: {setting.Name}. New Value: {value}");
             float.TryParse(value, out var shadowOffsetX);
             DotCrosshair.ShadowOffsetX = shadowOffsetX;
         }
 
         private static void ShadowOffsetYChanged(IGlobalModSetting setting, string value)
         {
-            Logger.Info($"setting.Name: {setting.Name}. New Value: {value}");
+            Logger.Debug($"setting.Name: {setting.Name}. New Value: {value}");
             float.TryParse(value, out var shadowOffsetY);
             DotCrosshair.ShadowOffsetY = shadowOffsetY;
         }

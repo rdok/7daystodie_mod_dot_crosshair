@@ -4,7 +4,7 @@
 
 [quote]
 [b]Dot Crosshair:[/b] Universally replaces the default crosshair with a dot.  
-[b]EAC Caveat:[/b] This mod uses custom code that is not compatible with Easy Anti-Cheat (EAC).
+[b]EAC:[/b] This mod uses custom code that is not compatible with Easy Anti-Cheat.
 [/quote]
 [url=https://www.nexusmods.com/7daystodie/mods/5640][img]https://github.com/rdok/7daystodie_mod_dot_crosshair/blob/main/documentation/showcase.gif?raw=true[/img][/url]
 
@@ -24,78 +24,4 @@
 [*] Hides crosshair when using weapons with iron sights.[/list]
 [*] Compatibility: this mod is compatible with other mods that hide the crosshair. For example use [url=https://www.nexusmods.com/7daystodie/mods/3252]Danzo No Crosshair[/url] instead of Immersive Crosshair in order to have a round dot always visible except when in aiming mode.
 [*] Game Version: 1.0. Install with [url=https://www.nexusmods.com/about/vortex/]Vortex[/url].
-[/list]
-[size=4]Development[/size]
-[list]
-[*] Use Google sheet to edit the Localization.txt. Just add the english versions.
-[*] To translate to all supported in game languages, using Google Translate API:
-[list]
-[*] [b]npm run translate:localization[/b] everytime you add a new localization record.
-[*] This will translate and replace in place all the Localization.txt records.
-[/list][/list]
-[size=5]Changelog[/size]
-[size=3]v1.4.0 31-Aug-24[/size]
-[list]
-[*] feat: Gear option [b]Ranged Weapons[/b]; disable this to use the vanilla crosshair when holding ranged weapons.
-[list]
-[*] [url=https://www.nexusmods.com/7daystodie/mods/5640?tab=posts&jump_to_comment=143481219&BH=0]As per discussion.[/url][/list][/list]
-[size=3]v1.3.3 24-Aug-24[/size]
-[list]
-[*] fix: Change the default dot size from 5 to 8 as the round dot is less visible than previously default square dot.[/list]
-[size=3]v1.3.2 21-Aug-24[/size]
-[list]
-[*] fix: Regression issue with Gears not loading properly
-[*] fix: Remove debugging logs on production[/list]
-[size=3]v1.3.1 21-Aug-24[/size]
-[list]
-[*] fix: Compatability fix with other mods that hide the crosshair. Tested:
-[list]
-[*] [url=https://www.nexusmods.com/7daystodie/mods/3252]Danzo No Crosshair[/url] 
-[*] [url=https://www.nexusmods.com/7daystodie/mods/5832]Black Wolf's better ADS accuracy and no crosshair[/url][/list][/list]
-[size=3]v1.3.0 21-Aug-24[/size]
-[list]
-[*] feat: Add alternative dot shape: round. Configurable through the Gears, the in game mod settings manager.
-[*] feat: Set default crosshair shape to round as it feels much better.
-[*] feat: Moved square only shadow settings to its own tab.
-[*] fix: Add missing translations for the tab title[/list]
-[size=3]v1.2.1 16-Aug-24[/size]
-[list]
-[*] fix: Use default (white) color when not using Gears.[/list]
-[size=3]v1.2.0 16-Aug-24[/size]
-[list]
-[*] feat: Optionally configurable dot size, color, and shadow using [url=https://www.nexusmods.com/7daystodie/mods/4017]Gears - A Mod Settings Manager[/url]
-[list]
-[*] Use https://www.color-hex.com/ to generate your RGBA color.
-[*] The mod will still work with the default values if you are not using Gears.
-[*] Translated to all in game languages.[/list][/list]
-[size=3]v1.1.0 12-Aug-24[/size]
-[list]
-[*] feat: Deprecated rendering logic using resource tools; use Immersive Crosshair instead.
-[list]
-[*] fix: Resolved an issue where the Immersive Crosshair enabled the crosshair, but the dot failed to render.[/list]
-[*] feat: Global version deprecated; Dot Crosshair now replaces the crosshair universally.[/list]
-[size=3]v1.0.4 Main Version 10-Aug-24[/size]
-[list]
-[*] fix: Replace the crosshair when holding any resource based tool instead of non-ranged weapons.
-[list]
-[*] Apparently there are ranged repair tools such as nail guns 
-[*] Many thanks to [url=https://next.nexusmods.com/profile/MrSamuelAdams1992/about-me?gameId=1059]MrSamuelAdams1992[/url] for [url=https://www.nexusmods.com/7daystodie/mods/5601?tab=posts&jump_to_comment=142699761]reporting this issue[/url][/list][/list]
-[size=3]v1.0.3 Main Version & v11.0.1 Global Dot 08 Aug 2024[/size]
-[list]
-[*] Decreases dot crosshair size by 14%
-[*] Decreases dot crosshair shadow size by 20%, better alignment with dot.
-[*] [url=https://www.nexusmods.com/7daystodie/mods/5640?tab=posts&jump_to_comment=142559019]As per discussion.[/url][/list]
-[size=3]v1.0.2 03 Aug 2024[/size]
-[list]
-[*] Decreases crosshair transparency by 25%.[/list]
-[size=3]v1.0.1 03 Aug 2024[/size]
-[list]
-[*] Adds missing dot shadow and decreases size.[/list]
-[size=3]v1.0.0 03 Aug 2024[/size]
-[list]
-[*] Replace the default (X) crosshair with a dot.
-[*] Preserves the default functionality for ranged weapons.
-[list]
-[*] Optional Mod file: Dot Crosshair Global. Install this instead of the main version if you want the dot crosshair globally.[/list]
-[*] Compatible with any other mods.
 [/list]
